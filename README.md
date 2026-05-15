@@ -2,7 +2,7 @@
 
 A Claude skill that acts as a thinking sparring partner — strengthening ideas through genuine challenge, not polite agreement.
 
-**Author:** Richard Drew, Senior Director of Architecture and Engineering
+**Author:** Richard Drew
 
 ---
 
@@ -99,6 +99,28 @@ When `optionality: on` is set, the Verdict Card includes an **Optional Stretch**
 ```
 /pt light There's something about how we run retros that's backwards
 ```
+
+---
+
+## Using on Mobile / Claude.ai
+
+Skills require Claude Code (CLI, desktop app, or IDE extension) and won't load in the Claude mobile app or claude.ai directly. The workaround is Claude's **Projects** feature, which is available on both web and mobile.
+
+**Setup (one time):**
+
+1. Open [claude.ai](https://claude.ai) and create a new Project
+2. Go to the project's **Custom instructions**
+3. Paste the full contents of `SKILL.md` into the instructions field and save
+
+**Using it:**
+
+Once the instructions are set, open any conversation inside that project — on web or mobile — and use `/pt` or `/pressure-test` exactly as you would in Claude Code.
+
+```
+/pt full The hustle culture backlash has gone too far.
+```
+
+The skill behaviour (all five moves, intensity levels, optionality) works the same way. The only difference is that Claude is reading the skill from project instructions rather than a skill file.
 
 ---
 
