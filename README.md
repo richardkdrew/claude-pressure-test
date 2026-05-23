@@ -26,10 +26,10 @@ Intensity levels let you dial from a collaborative think-out-loud (`light`) to a
 
 The simplest path. Works on web, desktop, and mobile.
 
-1. Open [claude.ai](https://claude.ai) and create a new Project
-2. Go to the project's **Custom instructions**
-3. Paste the full contents of [`gist/claude-pressure-test.md`](gist/claude-pressure-test.md) — this is the ready-to-paste version with usage instructions included
-4. Save, then open any conversation inside that project and use `/pt` or `/pressure-test`
+1. Open the [claude-pressure-test gist](https://gist.github.com/richardkdrew/c062631fdfee41fac10e815973576407) and copy everything from `# Pressure Test` to the end
+2. Open [claude.ai](https://claude.ai) and create a new Project
+3. Go to the project's **Custom instructions**, paste, and save
+4. Open any conversation inside that project and use `/pt` or `/pressure-test`
 
 ### Option B — Claude Code (CLI, desktop app, IDE)
 
