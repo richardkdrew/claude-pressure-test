@@ -13,12 +13,14 @@ The skill has a clear design philosophy: sparring partner, not professor. Change
 Changes that drift toward comprehensiveness, hedging, or academic structure are less likely to land.
 
 **Good candidates:**
+
 - Fixing a behaviour that's inconsistent across intensity levels
 - Improving how the skill handles a specific input type (e.g. long-form drafts, frameworks, analogies)
 - Clarifying ambiguous instructions in the skill file
 - Catching bugs in the Optional Stretch or Verdict Card formatting logic
 
 **Less likely to merge:**
+
 - Adding new moves or structural sections
 - Changing the tone guidelines significantly
 - Rewrites that alter the voice

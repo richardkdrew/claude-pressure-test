@@ -10,7 +10,7 @@ A Claude skill that acts as a thinking sparring partner — strengthening ideas 
 
 Pressure Test runs your idea through five structured moves:
 
-1. **Mirror** — Steel-mans your position so you're both working from the strongest version of the idea
+1. **Mirror** — Presents the strongest possible version of your idea (steel-manning it) so you're both working from the same foundation
 2. **Blind Spots** — Surfaces what you can't see from your vantage point
 3. **Counter-Punch** — Presents the best good-faith argument against you, voiced by a credible archetype
 4. **Analogy Flip** — Reframes the idea using your own mode of thinking to reveal angles you've missed
@@ -20,15 +20,25 @@ Intensity levels let you dial from a collaborative think-out-loud (`light`) to a
 
 ---
 
-## Installation
+## Get Started
 
-This skill is built for [Claude Code](https://claude.ai/code) using the [Claude Agent SDK](https://docs.anthropic.com/claude/docs/claude-agent-sdk) skill system.
+### Option A — Claude.ai or mobile (no install)
 
-1. Clone or download this repo
-2. Copy `SKILL.md` into your Claude skills directory (typically `~/.claude/skills/` or your project's `.claude/skills/`)
-3. Restart Claude Code — the skill will be auto-discovered
+The simplest path. Works on web, desktop, and mobile.
 
-> The skill responds to both `/pressure-test` and `/pt` trigger commands.
+1. Open [claude.ai](https://claude.ai) and create a new Project
+2. Go to the project's **Custom instructions**
+3. Paste the full contents of [`gist/claude-pressure-test.md`](gist/claude-pressure-test.md) — this is the ready-to-paste version with usage instructions included
+4. Save, then open any conversation inside that project and use `/pt` or `/pressure-test`
+
+### Option B — Claude Code (CLI, desktop app, IDE)
+
+```bash
+curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/main/SKILL.md \
+  > ~/.claude/skills/pressure-test.md
+```
+
+Restart Claude Code — the skill is auto-discovered and responds to `/pt` and `/pressure-test`.
 
 ---
 
@@ -36,17 +46,13 @@ This skill is built for [Claude Code](https://claude.ai/code) using the [Claude 
 
 ### Basic
 
-```
+```text
 /pt Your idea here
-```
-
-```
-/pressure-test Your idea here
 ```
 
 ### With intensity level
 
-```
+```text
 /pt light Is remote work permanently changing how teams build trust?
 
 /pt medium The best AI products right now are tools, not agents.
@@ -56,7 +62,7 @@ This skill is built for [Claude Code](https://claude.ai/code) using the [Claude 
 
 ### With optionality
 
-```
+```text
 /pt full optionality: on We should sunset our legacy API and force migration within 6 months.
 ```
 
@@ -65,7 +71,7 @@ When `optionality: on` is set, the Verdict Card includes an **Optional Stretch**
 ### Intensity levels
 
 | Level | Mirror | Blind Spots | Counter-Punch | Analogy Flip | Verdict Card |
-|-------|--------|-------------|---------------|--------------|--------------|
+| ------- | -------- | ------------- | --------------- | -------------- | -------------- |
 | `light` | Clean restatement | 1–2 gentle flags | Skipped | Brief reframe | 2–3 sentences |
 | `medium` | + implicit claims | 2–3 with explanation | 2–3 sentences | Developed analogy | Short paragraph |
 | `full` | + all assumptions named | Numbered, full weight | Voiced archetype, italicised | Rich scenario, specific | Scorecard table + three moves |
@@ -76,51 +82,43 @@ When `optionality: on` is set, the Verdict Card includes an **Optional Stretch**
 
 ## Examples
 
+### Financial strategy
+
+```text
+/pt full We should acquire a fintech rather than building in-house — we can't win the talent war and the window is closing.
+```
+
 ### Hot take
 
-```
+```text
 /pt full AI is making senior engineers less valuable, not more.
-```
-
-### LinkedIn post draft
-
-```
-/pt medium "The best leaders I've worked with never had the answer. They had the next question."
-```
-
-### Strategic read
-
-```
-/pt full optionality: on Our biggest competitive risk isn't another product — it's our customers learning to do without us.
 ```
 
 ### Half-formed thought
 
-```
-/pt light There's something about how we run retros that's backwards
-```
-
----
-
-## Using on Mobile / Claude.ai
-
-Skills require Claude Code (CLI, desktop app, or IDE extension) and won't load in the Claude mobile app or claude.ai directly. The workaround is Claude's **Projects** feature, which is available on both web and mobile.
-
-**Setup (one time):**
-
-1. Open [claude.ai](https://claude.ai) and create a new Project
-2. Go to the project's **Custom instructions**
-3. Paste the full contents of `SKILL.md` into the instructions field and save
-
-**Using it:**
-
-Once the instructions are set, open any conversation inside that project — on web or mobile — and use `/pt` or `/pressure-test` exactly as you would in Claude Code.
-
-```
-/pt full The hustle culture backlash has gone too far.
+```text
+/pt light There's something about how we run our planning cycles that feels backwards.
 ```
 
-The skill behaviour (all five moves, intensity levels, optionality) works the same way. The only difference is that Claude is reading the skill from project instructions rather than a skill file.
+### LinkedIn post draft
+
+```text
+/pt medium "The best leaders I've worked with never had the answer. They had the next question."
+```
+
+### Strategic decision with optionality
+
+```text
+/pt full optionality: on Our biggest competitive risk isn't another product — it's our customers learning to do without us.
+```
+
+### Revenue and go-to-market
+
+```text
+/pt medium We need to productise before we hire more salespeople — the delivery model is too bespoke to scale.
+```
+
+See [examples/](examples/) for full annotated runs across three business personas at different intensity levels.
 
 ---
 

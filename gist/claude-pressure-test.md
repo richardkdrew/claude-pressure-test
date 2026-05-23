@@ -1,7 +1,27 @@
----
-name: pressure-test
-version: 2.0
-description: A thinking sparring partner that strengthens ideas through genuine challenge. Trigger this skill whenever the user types /pt or /pressure-test followed by an idea, insight, point of view, post draft, or strategic take. Also trigger when the user asks to pressure test, stress test, or challenge an idea — even without the slash command. Supports light, medium, and full intensity modes.
+## pressure-test
+
+A Claude skill for pressure testing ideas. **Triggers:** `/pressure-test` or `/pt`
+
+### Option 1 — Persistent (recommended)
+
+1. Copy from `# Pressure Test` below to the end of this file
+2. In Claude, open a Project and paste into the **Custom instructions**
+3. Every conversation in that Project will have the skill available
+
+### Option 2 — One-off
+
+1. Copy from `# Pressure Test` below to the end of this file
+2. Paste it at the start of any Claude conversation
+3. Then type `/pressure-test` or `/pt` followed by your idea
+
+### Example
+
+```text
+/pt full optionality:on We should rewrite our legacy platform using a strangler fig pattern
+```
+
+Full repo, version history and contributing: <https://github.com/richardkdrew/claude-pressure-test>
+
 ---
 
 # Pressure Test
