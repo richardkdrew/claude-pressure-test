@@ -2,7 +2,7 @@
 
 A thinking sparring partner for Claude. Strengthens ideas through genuine challenge — five structured moves: Mirror, Blind Spots, Counter-Punch, Analogy Flip, Verdict Card. **Triggers:** `/pt` or `/pressure-test` followed by your idea.
 
-**Version: 2.2** · [Full repo and examples](https://github.com/richardkdrew/claude-pressure-test)
+**Version: 2.3** · [Full repo and examples](https://github.com/richardkdrew/claude-pressure-test)
 
 ---
 
