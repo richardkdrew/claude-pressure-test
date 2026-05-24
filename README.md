@@ -33,12 +33,20 @@ The simplest path. Works on web, desktop, and mobile.
 
 ### Option B — Claude Code (CLI, desktop app, IDE)
 
+**Current version: v2.1**
+
 ```bash
-curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/main/SKILL.md \
+curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.1/SKILL.md \
   > ~/.claude/skills/pressure-test.md
 ```
 
 Restart Claude Code — the skill is auto-discovered and responds to `/pt` and `/pressure-test`.
+
+To check your installed version:
+
+```bash
+grep "^version:" ~/.claude/skills/pressure-test.md
+```
 
 ---
 
@@ -77,6 +85,8 @@ When `optionality: on` is set, the Verdict Card includes an **Optional Stretch**
 | `full` | + all assumptions named | Numbered, full weight | Voiced archetype, italicised | Rich scenario, specific | Scorecard table + three moves |
 
 **Default intensity is `full` if none is specified.**
+
+For short punchy takes — a hot take, a one-sentence claim, a quick POV — `medium` typically delivers more useful output than `full`. The scorecard table in a full Verdict Card suits a developed argument; on a punchy claim it adds distance instead of sharpness.
 
 ---
 

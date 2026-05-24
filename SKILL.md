@@ -1,6 +1,6 @@
 ---
 name: pressure-test
-version: 2.0
+version: 2.1
 description: A thinking sparring partner that strengthens ideas through genuine challenge. Trigger this skill whenever the user types /pt or /pressure-test followed by an idea, insight, point of view, post draft, or strategic take. Also trigger when the user asks to pressure test, stress test, or challenge an idea — even without the slash command. Supports light, medium, and full intensity modes.
 ---
 
@@ -46,6 +46,8 @@ Surface what the user can't see from their vantage point. Hidden assumptions, ex
 ### 3. COUNTER-PUNCH — "The smart disagreement"
 
 Present the best argument against the user's position, made by a specific, credible hypothetical person who disagrees in good faith. Not a straw man — a real challenge from someone smart and well-intentioned.
+
+Choose the archetype for maximum useful friction — the person whose interests, experience, or vantage point are structurally different from the user's, not just a more senior version of them. The most uncomfortable counter-punch rarely comes from someone already in the room: it comes from the customer who churned, the person who will have to implement the decision, the competitor who sees what you can't, the regulator, the market that won't behave as expected.
 
 * Light: Skip this section entirely.
 * Medium: A concise counter-argument, 2–3 sentences.

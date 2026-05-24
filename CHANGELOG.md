@@ -4,6 +4,21 @@ All notable changes to the Pressure Test skill are documented here.
 
 ---
 
+## v2.1 — 2026-05-24
+
+### Changed
+
+- **Counter-Punch archetype guidance** — added explicit instruction to choose the archetype for structural difference, not seniority; the most useful friction comes from someone whose interests or vantage point are orthogonal to the user's, not a more senior version of them
+- **Gist preamble rewritten** — clearer entry point for first-time visitors; surfaces version number, adds 90-second setup framing
+- **Versioned install path** — README Option B curl command now points to a tagged release rather than `main`; includes version check one-liner
+- **Intensity guidance** — README now steers users toward `medium` for short punchy takes where the full scorecard table adds distance instead of sharpness
+
+### Fixed
+
+- **Gist markdownlint config** — brought in line with root config to suppress false positives on long prose lines throughout the skill content
+
+---
+
 ## v2 — 2026-05-16
 
 ### Added
