@@ -7,7 +7,7 @@ A Claude skill that acts as a thinking sparring partner. The canonical skill is 
 ## Key files
 
 | File | Purpose |
-|------|---------|
+| ---- | ------- |
 | `SKILL.md` | Canonical skill — installed via Claude Code Option B |
 | `gist/claude-pressure-test.md` | Distribution artifact for claude.ai / Option A users |
 | `examples/` | Annotated example runs across four personas |
@@ -15,6 +15,12 @@ A Claude skill that acts as a thinking sparring partner. The canonical skill is 
 | `CONTRIBUTING.md` | Contribution guidelines and release checklist |
 
 ## Release process
+
+Always branch new releases from `main`, not from a previous release branch — branching from a release branch causes merge conflicts when the earlier PR is merged via GitHub's merge commit.
+
+```bash
+git checkout main && git pull && git checkout -b release/vX.Y
+```
 
 When making changes to `SKILL.md` or `gist/claude-pressure-test.md`, follow this checklist. All steps are required — the curl install path points to a tagged release, so a missing tag means users can't install the new version.
 
