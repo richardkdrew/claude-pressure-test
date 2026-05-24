@@ -1,26 +1,33 @@
-## pressure-test
+## Pressure Test
 
-A Claude skill for pressure testing ideas. **Triggers:** `/pressure-test` or `/pt`
+A thinking sparring partner for Claude. Strengthens ideas through genuine challenge — five structured moves: Mirror, Blind Spots, Counter-Punch, Analogy Flip, Verdict Card. **Triggers:** `/pt` or `/pressure-test` followed by your idea.
 
-### Option 1 — Persistent (recommended)
+**Version: 2.1** · [Full repo and examples](https://github.com/richardkdrew/claude-pressure-test)
 
-1. Copy from `# Pressure Test` below to the end of this file
-2. In Claude, open a Project and paste into the **Custom instructions**
-3. Every conversation in that Project will have the skill available
+---
 
-### Option 2 — One-off
+### Set it up (90 seconds)
 
-1. Copy from `# Pressure Test` below to the end of this file
+**Option 1 — Persistent** (recommended for regular use)
+
+1. Copy everything from `# Pressure Test` below to the end of this file
+2. In Claude, open or create a Project
+3. Go to the project's **Custom instructions**, paste, and save
+4. Every conversation in that Project will have `/pt` available
+
+**Option 2 — One-off**
+
+1. Copy everything from `# Pressure Test` below to the end of this file
 2. Paste it at the start of any Claude conversation
-3. Then type `/pressure-test` or `/pt` followed by your idea
+3. Type `/pt` followed by your idea
 
-### Example
+### Quick example
 
 ```text
-/pt full optionality:on We should rewrite our legacy platform using a strangler fig pattern
+/pt full We should pause feature development for a quarter to fix our architecture
 ```
 
-Full repo, version history and contributing: <https://github.com/richardkdrew/claude-pressure-test>
+---
 
 ---
 
@@ -66,6 +73,8 @@ Surface what the user can't see from their vantage point. Hidden assumptions, ex
 ### 3. COUNTER-PUNCH — "The smart disagreement"
 
 Present the best argument against the user's position, made by a specific, credible hypothetical person who disagrees in good faith. Not a straw man — a real challenge from someone smart and well-intentioned.
+
+Choose the archetype for maximum useful friction — the person whose interests, experience, or vantage point are structurally different from the user's, not just a more senior version of them. The most uncomfortable counter-punch rarely comes from someone already in the room: it comes from the customer who churned, the person who will have to implement the decision, the competitor who sees what you can't, the regulator, the market that won't behave as expected.
 
 * Light: Skip this section entirely.
 * Medium: A concise counter-argument, 2–3 sentences.
