@@ -13,7 +13,18 @@ If the user hasn't provided a short description of what was fixed, ask before do
 
 ## Steps
 
-### 1. Capture and stash current changes
+### 1. Pull from main first
+
+Fetch the latest state of main before doing anything — so you're working from current reality, not a stale local snapshot:
+
+```bash
+git fetch origin
+git log --oneline origin/main -5
+```
+
+Check what's already merged. If the user's changes are already in main, say so and stop.
+
+### 2. Capture and stash current changes
 
 ```bash
 git status
@@ -22,7 +33,7 @@ git stash
 
 Note which files were modified — you'll need this for the commit.
 
-### 2. Branch from main
+### 3. Branch from main
 
 ```bash
 git checkout main && git pull --rebase && git checkout -b fix/short-description
@@ -31,11 +42,11 @@ git stash pop
 
 Use a short kebab-case description for the branch name derived from what the user told you (e.g. `fix/gist-sharing-url`, `fix/readme-typo`).
 
-### 3. Commit and push
+### 4. Commit and push
 
 Stage only the files that were changed. Commit with a clear one-line message describing what was fixed. Push with `-u origin fix/short-description`.
 
-### 4. Output the PR template and handoff
+### 5. Output the PR template and handoff
 
 Output the following as a filled markdown code block, then say: "Open a PR from `fix/short-description` into `main` on GitHub and paste the above as the PR description."
 

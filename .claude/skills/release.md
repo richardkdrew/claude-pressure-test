@@ -17,14 +17,25 @@ Clarify whether the changes include:
 
 ## Steps
 
-### 1. Capture and stash current changes
+### 1. Pull from main first
+
+Fetch the latest state of main before doing anything — so you're working from current reality, not a stale local snapshot:
+
+```bash
+git fetch origin
+git log --oneline origin/main -5
+```
+
+Check what's already merged. If the user's changes are already in main, say so and stop.
+
+### 2. Capture and stash current changes
 
 ```bash
 git status
 git stash
 ```
 
-### 2. Read current version
+### 3. Read current version
 
 ```bash
 grep "^version:" SKILL.md | sed 's/version: //'
@@ -32,14 +43,14 @@ grep "^version:" SKILL.md | sed 's/version: //'
 
 Bump the minor version (e.g. `2.3` → `2.4`). This is the new version for this release.
 
-### 3. Branch from main
+### 4. Branch from main
 
 ```bash
 git checkout main && git pull --rebase && git checkout -b release/vX.Y
 git stash pop
 ```
 
-### 4. Bump version in four places
+### 5. Bump version in four places
 
 Use the Edit tool (not sed) to update each precisely:
 
@@ -48,15 +59,15 @@ Use the Edit tool (not sed) to update each precisely:
 - `README.md`: `**Current version: vX.Y**`
 - `README.md` curl URL: `…/vX.Y/SKILL.md`
 
-### 5. Write CHANGELOG entry
+### 6. Write CHANGELOG entry
 
 Add at the top of `CHANGELOG.md` (after the header block, before the previous release). Use today's date. Format consistently with existing entries — `### Changed`, `### Added`, `### Fixed` sections as appropriate. Use the user's description to write the entries.
 
-### 6. Commit and push
+### 7. Commit and push
 
 Stage all modified files explicitly by name. Commit with a message in the style of existing commits. Push with `-u origin release/vX.Y`.
 
-### 7. Output the PR template and handoff
+### 8. Output the PR template and handoff
 
 Output the following as a filled markdown code block, then say: "Open a PR from `release/vX.Y` into `main` on GitHub and paste the above as the PR description."
 
