@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   create-release:
@@ -41,6 +42,8 @@ jobs:
   publish-gist:
     name: Publish gist
     runs-on: ubuntu-latest
+    env:
+      GIST_ID: c062631fdfee41fac10e815973576407
     steps:
       - uses: actions/checkout@v4
         with:
@@ -62,8 +65,8 @@ jobs:
         run: |
           jq -n --rawfile content gist/claude-pressure-test.md \
             '{"files": {"claude-pressure-test.md": {"content": $content}}}' \
-          | curl -s -X PATCH \
+          | curl -s --fail -X PATCH \
             -H "Authorization: token $GIST_TOKEN" \
             -H "Content-Type: application/json" \
             -d @- \
-            https://api.github.com/gists/c062631fdfee41fac10e815973576407
+            "https://api.github.com/gists/$GIST_ID"

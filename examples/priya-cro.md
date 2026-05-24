@@ -29,20 +29,20 @@ How to build a scalable revenue function at a firm where delivery is bespoke, pr
 
 ### Mirror
 
-The argument is: salespeople need something to sell. Right now the firm doesn't have a thing — it has a capability, a reputation, and a founder who can translate those into revenue through relationships. A new salesperson can't replicate that. So before adding headcount, the work is to define what the product actually is — fixed-scope engagements, named offerings, clear pricing — so that sales becomes a learnable, repeatable motion rather than a founder-specific superpower.
+The sales process is broken because there's nothing consistent to sell. Every deal is bespoke — different scope, different pricing, different model — so you can't hire salespeople into a system that doesn't exist yet. First, standardise the offering. Then scale the people. Sound about right?
 
 ### Blind Spots
 
-- Is productisation actually what's blocking sales, or is it what would make sales more comfortable? Some professional services firms scale successfully on the back of a well-run discovery and scoping process — the variability is the product, and the skill is selling confidence rather than a fixed deliverable. Worth asking whether you're solving the real constraint or the most visible one.
-- Who defines what the products are? This is harder than it sounds at a firm where every engagement has been shaped by delivery. If the answer is "we figure that out before we hire," that decision gate may keep moving.
+- The three clients carrying 60% of revenue — were they won through a productised offering, or through the founder's relationships and judgment calls? If it's the latter, is the bespoke delivery actually the problem, or is it that the sales motion lives entirely in one person's head?
+- Is there a chance "we need to productise first" is doing some work as a reason to delay the harder conversation — which is that the founder needs to actively transfer those relationships, not just step back?
 
 ### Analogy Flip
 
-Think of it like a restaurant deciding it needs to invent a fixed prix-fixe menu before it can hire a maitre d'. Maybe. Or maybe what it actually needs is a maitre d' who can present the à la carte menu with confidence — and the problem was never the menu.
+You're reasoning like a software company that needs to finish the product before it can hire a sales team. But think about a management consulting firm opening a new practice area. They don't productise the methodology first — they hire a senior partner with a network, let her win a few messy, bespoke engagements, and the repeatable offering emerges from what she keeps selling. The clarity came from the sales motion, not before it. The hire might be what forces the productisation, not what requires it.
 
 ### Verdict Card
 
-The instinct is right that salespeople need clarity about what they're selling, and there's something real in the observation that the current model is hard to hand off. The thing to sharpen: productisation and hiring don't have to be strictly sequential. The question is what minimum definition of the offering is enough to make a sales hire useful — not what the full productised version looks like.
+The diagnosis is real — no repeatable motion is a genuine ceiling. But the sequencing assumption is doing a lot of unexamined work: that standardisation is a precondition rather than an output of good selling. The strongest version of this idea names specifically which parts of the delivery model need to harden, and tests whether a sales hire with the right profile could actually accelerate that process rather than wait for it.
 
 ---
 
@@ -58,46 +58,57 @@ The instinct is right that salespeople need clarity about what they're selling, 
 
 ### Mirror
 
-Your argument is this: the revenue function can't scale because what you're selling isn't stable enough to sell at scale. The founder succeeded through relationships and pattern-recognition — he could read a client's situation and shape an engagement in real time. That's not a process, it's a talent. A new salesperson hired into this environment won't have the contextual depth to do what he does, will either over-promise or under-pitch, and will struggle to close without pulling the founder in anyway. So the precondition for scaling sales is creating something explicit and repeatable: named offerings, defined scope, consistent pricing, clear buyer entry points. Productisation first. Then headcount.
+The argument is: sales can't scale because every deal is reinvented from scratch — different scope, different pricing, different engagement model. That variability is a sales process problem masquerading as a delivery problem. Until you have a defined product with defined outcomes at defined price points, you can't train a salesperson on what to sell, can't build collateral that holds across deals, and can't predict close rates or deal economics. Hiring sales capacity into that chaos doesn't compound — it just multiplies the chaos. So the sequence has to be: lock down the product first, then build the sales motion around it.
 
-This assumes three things: that the delivery variability is the primary reason a salesperson can't succeed here, that the firm can actually define fixed-scope offerings without destroying the value clients are buying, and that productisation is something that can be done before hiring rather than in parallel with it.
+The load-bearing assumptions are:
+
+1. That the current bespoke delivery is the *cause* of sales unpredictability, not a symptom of it — that if you productise, the sales problem resolves downstream.
+2. That you can define a product from the inside, without more reps of the sales conversation to tell you what the market actually wants to buy.
+3. That the three founder-led clients represent what a productised version should look like — that their needs generalise, rather than reflect the founder's network and relationships.
+4. That the org has enough margin and time for a productisation phase before revenue pressure forces a different move.
+
+Does that capture it?
 
 ### Blind Spots
 
-1. **Productisation may be a solution to your discomfort, not your clients' problem.** The clients paying $8M in revenue — especially the three anchor clients — didn't buy a product. They bought outcomes, shaped collaboratively, from people they trust. Mid-market AI implementation is genuinely complex and genuinely variable. If you productise in a way that makes internal sales motions cleaner but makes the offering less responsive, you may solve the wrong problem and lose the accounts you already have.
+1. **You're diagnosing from delivery, not from pipeline.** You haven't run enough sales conversations yourself to know whether bespoke delivery is the bottleneck. It's possible — likely, even — that the real friction is earlier: positioning is murky, the firm doesn't have a clear wedge, prospects can't self-qualify. Productisation solves none of that. You could ship a clean three-SKU service menu and still have salespeople who can't explain why a prospect should pick this firm over a cheaper offshore option. The product is not the pitch.
 
-2. **"Productise first" is a decision gate that may never open.** Who owns the productisation work? Delivery teams are stretched and won't do it without a forcing function. The founder is the only one who truly understands the pattern across engagements, and he's trying to step back. This can become an indefinite prerequisite that keeps the revenue function in limbo while the firm remains founder-dependent anyway.
+2. **The founder's clients may be the wrong dataset.** The 60% concentration isn't just a revenue risk — it's an epistemological one. Those clients were bought through relationships, not through a replicable sales motion. If your productisation work reverse-engineers what those three engagements looked like, you may be optimising for deals that can't be replicated by anyone who isn't the founder. The product you're about to build might be a monument to unrepeatable conditions.
 
-3. **The sales problem may be cultural before it is structural.** You noted it yourself: half the team thinks sales is something that happens to them. If delivery people aren't generating referrals, bringing up expansion opportunities, or flagging strategic moments in client relationships, productised offerings won't fix that. A new salesperson hired into that culture will be swimming against the current regardless of how clean the packaging is.
+3. **Productisation is a months-long internal project that generates zero pipeline.** Meanwhile, the founder is still doing the selling, the team still thinks sales happens to them, and the clock on your tenure is ticking. Every month spent in productisation workshops is a month where you haven't demonstrated revenue progress. If you don't close meaningful new logos in your first year, the internal narrative becomes "she was hired to fix sales and spent the year repackaging our services." The sequencing risk isn't just strategic — it's political.
 
-4. **You may be confusing "hard to sell" with "hard to sell at scale."** Enterprise and mid-market professional services firms scale successfully with bespoke models all the time — Bain, McKinsey, specialist boutiques — through a disciplined sales process, consistent qualification criteria, and delivery people who are also relationship owners. The constraint may not be the product definition; it may be the sales infrastructure: CRM, pipeline discipline, qualification frameworks, account plans. Those can be built before productisation is complete.
+4. **"Productise first" can become organisational cover for not selling.** A firm where half the team thinks sales happens to *them* will embrace a productisation project with genuine enthusiasm — because it sounds important, it's internally focused, and it defers the uncomfortable thing, which is getting in front of strangers and losing deals. You may be handing the conflict-avoidant part of the org a six-month permission slip.
 
-5. **Hiring sequence risk.** If you wait for productisation before hiring salespeople, you may be waiting eighteen months and still not be ready. And you'll have spent those eighteen months as a team of one in the revenue function, without the pressure of a sales team's pipeline creating a real feedback loop on what buyers actually respond to. The productisation work done in isolation may be wrong by the time anyone tries to sell it.
+5. **You're assuming productisation will survive contact with clients.** Professional services firms have productised before and discovered that clients — especially the kind you attract through a founder's network — specifically want the bespoke version. They're paying a premium for felt customisation. When you show up with a package, they either negotiate it back into bespoke territory, or they go elsewhere.
 
 ### Counter-Punch
 
-Here's what a Managing Director at a boutique strategy firm who scaled from $5M to $40M on a deliberately variable delivery model would say back:
+Here's what a Managing Director who scaled a boutique strategy practice from $5M to $40M on a deliberately variable delivery model would say back:
 
-*"We had this exact conversation. We almost productised. I'm glad we didn't. Here's the thing: the reason your anchor clients are anchor clients is precisely because you don't have a product. They stayed because every engagement was shaped around their problem, not fitted to your template. The moment you show up with a fixed scope and a price list, you've become a vendor — and vendors get evaluated, benchmarked, and eventually replaced. What you actually need isn't a product. You need a sales motion that can hold the complexity — a qualification framework that tells your salespeople quickly whether this is a real opportunity, an engagement model that has enough structure to be explained without being so rigid it kills the deal, and delivery people who understand that staying close to the client is part of the job. I'd hire one strong enterprise salesperson with professional services DNA, give them six months in the room with delivery, and let them tell you what needs to be more defined. They'll surface the real packaging problem faster than any internal productisation exercise will."*
+*"I ran the largest practice in a Big Four firm for three years before moving into a growth role at a boutique. Here's what I know that you don't yet: we had the most productised service menu in the market — defined methodologies, fixed-price tiers, implementation playbooks, the lot. Beautiful slide decks. Partners couldn't sell any of it. Because the people selling it hadn't built it, didn't believe in it, and couldn't answer a client's second question. What finally worked — and this took us two years to figure out — was hiring one rainmaker and letting her run deals the way she wanted to run them. Messy, bespoke, high-touch. Then we watched her closely enough to understand what she was actually selling underneath the customisation: a specific outcome, articulated in a specific way, to a specific buyer profile. That insight took six months of live deals to surface. It could not have been derived from an internal productisation project. The product that emerged was accurate because it came from the market, not from a workshop. You're proposing to productise before you have that signal. You'll build something internally coherent and market-irrelevant."*
 
 ### Analogy Flip
 
-A bespoke tailor decides he can't scale his shop because every suit is made to measure. His solution: design three standard cuts, fix the pricing, and then hire more salespeople to move units. The problem is that his clients — the ones who've been coming for fifteen years — aren't buying a suit. They're buying the experience of being measured and consulted and having something made for them. The three standard cuts might be easier to sell. But they'll attract a different buyer. The question isn't whether a productised offering is more scalable — it probably is. The question is whether what makes this firm valuable survives the productisation, or whether you're scaling a version of the firm that isn't the one with the reputation.
+The logical structure of your argument is: you need to standardise the thing before you can scale the people who sell it. The inversion worth sitting with: sometimes the salespeople create the product clarity.
+
+IBM's professional services arm in the mid-to-late 1980s was deeply bespoke — every major systems integration engagement was custom-scoped, custom-staffed, custom-priced. IBM's internal response was to try to productise: define reference architectures, standard engagement models, repeatable methodologies. Those efforts produced documentation that nobody used and proposals that clients still negotiated from scratch. What actually built the business — and what became the foundation for IBM Global Services as a scalable unit — was a cohort of senior client executives given licence to run deals their own way, at scale, with enough volume that patterns emerged from the outside in. The product definition came *after* those salespeople had run enough engagements to show leadership what clients were actually buying.
+
+The parallel is structural: in both cases, a high-expertise firm with bespoke delivery assumed product clarity had to precede sales scale. IBM discovered that inverting that sequence — hiring sales capacity first, mining it for product signal — produced the clarity that internal productisation efforts had failed to generate.
 
 ### Verdict Card
 
 | Dimension | Assessment |
 | --- | --- |
-| Core Insight | Partially right — clarity about the offering is genuinely needed; the problem is the sequencing, not the direction |
-| Founder Dependency | Real and urgent — but productisation isn't the only path out; sales infrastructure and a strong first hire can break the dependency too |
-| Delivery Variability | Underexamined — variable delivery may be the product, not the problem; the risk is solving for internal simplicity at the cost of client value |
-| Sales Culture Gap | Underweighted — half the team thinks sales happens to them; this is a harder problem than packaging and won't be fixed by better offerings |
-| Hiring Sequence | High risk — "productise before hiring" can become an indefinite gate; a strong first sales hire generates the feedback loop that productisation work currently lacks |
-| Biggest Risk | Completing a productisation exercise in isolation, hiring salespeople to sell it, and discovering the market still wants bespoke — leaving you with a weaker offering and the same founder dependency |
+| Core Insight | Sales unpredictability is real, but productisation is a hypothesis about its cause — not a confirmed diagnosis. The actual bottleneck may be positioning, pitch, or buyer profile, none of which a service menu resolves. |
+| Sequencing Logic | Productise-first is internally legible but market-blind. Product definition derived from internal workshops risks encoding what the firm is good at, not what buyers will pay for. |
+| Organisational Dynamics | A team that thinks sales happens to them will find productisation projects deeply comfortable. That comfort is a warning sign, not a green light. |
+| Evidence Base | Three founder-led clients is a thin and structurally unrepresentative dataset for product design. Reverse-engineering their engagements risks optimising for deals that required the founder. |
+| Time and Political Risk | Zero pipeline impact during a productisation phase, in a role where early wins matter. If you're not closing new logos in year one, the narrative sets against you regardless of the quality of the work. |
+| Biggest Risk | You spend six months building something internally coherent, hire into it, and discover the product doesn't match what the market will buy — at which point you've lost the time, the political capital, and the option to sequence it differently. |
 
-**Quick Fix** — Before committing to productisation as a precondition, run a one-week diagnostic: interview all three anchor clients and ask them to describe what they bought and why they kept renewing. If they describe a capability and a relationship rather than a scope, that's a signal about what you're actually selling. Let that data shape the productisation thesis before you build it.
+**Quick Fix** — Run five to eight sales conversations with net-new prospects *before* any productisation work. Don't sell them anything. Just learn what problem they think they have, what solution shape they're reaching for, and what would make them say yes. That's your product brief.
 
-**Structural Move** — Separate the packaging problem from the hiring decision. You don't need a finished product before you hire — you need enough definition to give a salesperson a real brief. Define one or two entry-point offerings (not the full portfolio) with clear ICP, outcome statement, and ballpark price range. Hire someone with professional services sales DNA who can work with ambiguity. Let them pressure-test the packaging in market for ninety days. Productisation built with live sales feedback will be more accurate and more sellable than productisation built in a room.
+**Structural Move** — Hire one strong enterprise seller — someone with a high-touch, consultative close style — and give her six months to work live deals with whatever flexibility she needs. Sit in on every discovery call. What she learns from the market is worth more than any internal productisation project, and it will make the productisation work that follows accurate rather than internally self-referential.
 
 ---
 
