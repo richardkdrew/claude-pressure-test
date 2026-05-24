@@ -4,6 +4,19 @@ All notable changes to the Pressure Test skill are documented here.
 
 ---
 
+## v2.3 — 2026-05-24
+
+### Added
+
+- **Release automation** — `on-merge` workflow now automatically publishes the gist and creates the GitHub release and tag on every merge to main; no manual web UI steps required
+- **PR template guidance** — CLAUDE.md documents how to fill the PR template for release and infrastructure branches
+
+### Changed
+
+- **Release checklist simplified** — CLAUDE.md and CONTRIBUTING.md updated to reflect automation; manual steps reduced to version bumps, CHANGELOG, and PR
+
+---
+
 ## v2.2 — 2026-05-24
 
 ### Changed

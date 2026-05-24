@@ -46,14 +46,13 @@ I'll read every PR. I won't always respond immediately, but I will respond. If s
 
 When changes to SKILL.md or the gist are ready to ship:
 
-1. Bump `version:` in the SKILL.md frontmatter (e.g. `2.1` → `2.2`)
+1. Bump `version:` in the SKILL.md frontmatter (e.g. `2.2` → `2.3`)
 2. Update the version in the gist preamble to match
 3. Add an entry to CHANGELOG.md
 4. Update the version number in the README.md Option B curl URL
-5. Commit and push
-6. Tag the release via GitHub web UI: go to the repo → **Releases** → **Draft a new release** → create tag `vX.Y` → set title `vX.Y` → paste the CHANGELOG entry → **Publish release**
+5. Commit, push, open PR, merge
 
-The curl URL in README.md points to a tagged release, not `main` — so the tag must exist before anyone can install the new version via that path.
+After merge, the `on-merge` workflow runs automatically — it publishes the updated gist and creates the GitHub release and tag.
 
 ---
 

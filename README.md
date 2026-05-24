@@ -37,10 +37,10 @@ If you want to share this with non-technical colleagues, send them the [gist lin
 
 ### Option B — Claude Code (CLI, desktop app, IDE)
 
-**Current version: v2.2**
+**Current version: v2.3**
 
 ```bash
-curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.2/SKILL.md \
+curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.3/SKILL.md \
   > ~/.claude/skills/pressure-test.md
 ```
 
