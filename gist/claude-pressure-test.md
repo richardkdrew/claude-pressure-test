@@ -2,7 +2,7 @@
 
 A thinking sparring partner for Claude. Strengthens ideas through genuine challenge — five structured moves: Mirror, Blind Spots, Counter-Punch, Analogy Flip, Verdict Card. **Triggers:** `/pt` or `/pressure-test` followed by your idea.
 
-**Version: 2.1** · [Full repo and examples](https://github.com/richardkdrew/claude-pressure-test)
+**Version: 2.2** · [Full repo and examples](https://github.com/richardkdrew/claude-pressure-test)
 
 ---
 
@@ -20,6 +20,8 @@ A thinking sparring partner for Claude. Strengthens ideas through genuine challe
 1. Copy everything from `# Pressure Test` below to the end of this file
 2. Paste it at the start of any Claude conversation
 3. Type `/pt` followed by your idea
+
+**Want to share this?** Forward this link to a colleague — the setup instructions above are all they need.
 
 ### Quick example
 
