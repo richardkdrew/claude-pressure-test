@@ -4,6 +4,21 @@ All notable changes to the Pressure Test skill are documented here.
 
 ---
 
+## v2.4 — 2026-05-24
+
+### Changed
+
+- **Mirror step rebuilt** — instruction changed from "restate" to "reconstruct": name the best arguments supporting the idea even if the user didn't articulate them; after presenting the mirror, check in ("Does that capture it?") before proceeding to Blind Spots
+- **Analogy Flip sharpened** — new instruction to identify the logical structure being mirrored (the relationship between elements, not the topic) before choosing a scenario; an analogy that works by surface association but not structural parallel will feel clever and land wrong
+- **Counter-Punch rigor criterion added** — choose the argument that would most directly undermine the core claim, not just the most rhetorically credible objection; the archetype gives it voice, the logic gives it teeth
+- **Trigger extended** — the command may now appear at the start or end of a message; context provided before or after the trigger is treated as part of the idea
+- **Input format broadened** — example use cases updated to include philosophical positions, creative principles, personal decisions; "LinkedIn post draft" removed as a first-class example
+- **Example runs updated** — all four persona examples regenerated to reflect updated skill behaviour; new analogies (Michelin star kitchen, IBM Global Services, coal preparation workers, radiology) and new counter-punch archetypes across the runs
+- **Workflow hardened** — `curl --fail` added to gist publish step; `workflow_dispatch` trigger added; gist ID moved to job-level env var
+- **Version consistency CI check** — new `version-check.yml` workflow verifies version sync across SKILL.md, README, gist, and CHANGELOG on every PR to main
+
+---
+
 ## v2.3 — 2026-05-24
 
 ### Added
