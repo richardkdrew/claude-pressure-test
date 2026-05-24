@@ -31,12 +31,16 @@ The simplest path. Works on web, desktop, and mobile.
 3. Go to the project's **Custom instructions**, paste, and save
 4. Open any conversation inside that project and use `/pt` or `/pressure-test`
 
+### Sharing with colleagues
+
+If you want to share this with non-technical colleagues, send them the [gist link](https://gist.github.com/richardkdrew/c062631fdfee41fac10e815973576407) rather than this page — it's designed as the entry point for anyone on claude.ai with no GitHub account or command line needed.
+
 ### Option B — Claude Code (CLI, desktop app, IDE)
 
-**Current version: v2.1**
+**Current version: v2.2**
 
 ```bash
-curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.1/SKILL.md \
+curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.2/SKILL.md \
   > ~/.claude/skills/pressure-test.md
 ```
 

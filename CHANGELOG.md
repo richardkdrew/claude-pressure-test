@@ -4,6 +4,15 @@ All notable changes to the Pressure Test skill are documented here.
 
 ---
 
+## v2.2 — 2026-05-24
+
+### Changed
+
+- **Sharing prompt in gist** — one-line prompt added after setup instructions so users know to forward the gist link to colleagues
+- **README sharing guidance** — explicit note for technical users to send the gist link (not the GitHub repo) when sharing with non-technical colleagues
+
+---
+
 ## v2.1 — 2026-05-24
 
 ### Changed

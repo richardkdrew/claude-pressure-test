@@ -1,6 +1,6 @@
 ---
 name: pressure-test
-version: 2.1
+version: 2.2
 description: A thinking sparring partner that strengthens ideas through genuine challenge. Trigger this skill whenever the user types /pt or /pressure-test followed by an idea, insight, point of view, post draft, or strategic take. Also trigger when the user asks to pressure test, stress test, or challenge an idea — even without the slash command. Supports light, medium, and full intensity modes.
 ---
 
