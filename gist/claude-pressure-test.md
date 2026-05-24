@@ -21,15 +21,14 @@ A thinking sparring partner for Claude. Strengthens ideas through genuine challe
 2. Paste it at the start of any Claude conversation
 3. Type `/pt` followed by your idea
 
-**Want to share this?** Forward this link to a colleague — the setup instructions above are all they need.
+**Want to share this?** Forward this gist link to a colleague — the setup instructions above are all they need:
+<https://gist.github.com/richardkdrew/c062631fdfee41fac10e815973576407>
 
 ### Quick example
 
 ```text
 /pt full We should pause feature development for a quarter to fix our architecture
 ```
-
----
 
 ---
 
