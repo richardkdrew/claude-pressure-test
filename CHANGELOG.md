@@ -4,6 +4,14 @@ All notable changes to the Pressure Test skill are documented here.
 
 ---
 
+## v2.5 — 2026-06-10
+
+### Fixed
+
+- **Option B install path corrected** — curl command now writes to `~/.claude/skills/pressure-test/SKILL.md` (folder + SKILL.md) rather than a flat named file; version check one-liner updated to match
+
+---
+
 ## v2.4 — 2026-05-24
 
 ### Changed

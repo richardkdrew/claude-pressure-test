@@ -37,11 +37,12 @@ If you want to share this with non-technical colleagues, send them the [gist lin
 
 ### Option B — Claude Code (CLI, desktop app, IDE)
 
-**Current version: v2.4**
+**Current version: v2.5**
 
 ```bash
-curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.4/SKILL.md \
-  > ~/.claude/skills/pressure-test.md
+mkdir -p ~/.claude/skills/pressure-test && \
+curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.5/SKILL.md \
+  > ~/.claude/skills/pressure-test/SKILL.md
 ```
 
 Restart Claude Code — the skill is auto-discovered and responds to `/pt` and `/pressure-test`.
@@ -49,7 +50,7 @@ Restart Claude Code — the skill is auto-discovered and responds to `/pt` and `
 To check your installed version:
 
 ```bash
-grep "^version:" ~/.claude/skills/pressure-test.md
+grep "^version:" ~/.claude/skills/pressure-test/SKILL.md
 ```
 
 ---
