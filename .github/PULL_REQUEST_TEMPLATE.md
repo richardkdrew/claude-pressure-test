@@ -27,3 +27,4 @@
 - [ ] Makes the skill a better sparring partner, not a more comprehensive one
 - [ ] Tone guidelines preserved
 - [ ] Consistent across intensity levels (or the inconsistency is intentional and noted above)
+- [ ] Any real-world case used in examples or analogies is one I've checked

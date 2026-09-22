@@ -4,11 +4,39 @@ All notable changes to the Pressure Test skill are documented here.
 
 ---
 
-## v2.5 — 2026-06-10
+## v2.6 — 2026-09-23
+
+v2.5 was never released; its install-path fix ships here.
+
+### Changed
+
+- **Mirror waits at full intensity** — at `full`, the Mirror is its own turn: Claude checks it has understood the idea and waits for the reply before challenging it. `light` and `medium` still run in one response, and a corrected mirror reruns from Blind Spots
+- **Blind spots: fewer, sharper** — full intensity now asks for the blind spots that would change the decision, not every one that can be found ("two sharp ones beat six padded ones")
+- **Room to say an idea holds up** — new tone guideline: if the idea mostly holds, say so and put the pressure on the one place it doesn't
+- **Optionality at medium** — `optionality: on` now adds a short Optional Stretch (one sentence per approach) at `medium`; it's ignored at `light`
+- **Input format** — syntax now reads `[light | medium | full] [optionality: on]`, matching how it's actually typed
+- **Examples** — full-intensity runs show the Mirror pause; each run notes the context it was given; unverifiable historical analogies (coal preparation plants, IBM Global Services) replaced with clearly framed hypotheticals; Tumblr analogy trimmed to verifiable facts; Priya's counter-punch archetype made consistent
+- **Gist restructured** — two files: a setup guide and the skill itself, generated from `SKILL.md` at publish, so it can be opened raw and copied in one go
+- **Release process in one place** — `.claude/skills/release/SKILL.md` is the single source; CLAUDE.md and CONTRIBUTING.md point to it
+
+### Added
+
+- **Analogy grounding rule** — real cases only when Claude is confident they happened as described; otherwise framed as a hypothetical
+- **claude.ai skill upload** — each release attaches `pressure-test.zip` for Settings → Capabilities → Skills, plus `SKILL.md` for a stable "latest" download URL
+- **Update instructions** for both claude.ai and Claude Code
+- **CI** — exact checks on both README version locations, a failing check when `SKILL.md` changes without a version bump, a dist build check, and markdownlint
+- `.gitignore`
 
 ### Fixed
 
-- **Option B install path corrected** — curl command now writes to `~/.claude/skills/pressure-test/SKILL.md` (folder + SKILL.md) rather than a flat named file; version check one-liner updated to match
+- **Option B install path** — curl now writes to `~/.claude/skills/pressure-test/SKILL.md` (folder + SKILL.md) instead of a flat file Claude Code never discovered, and creates the folder first
+- **Safer download** — `curl -fsSL … -o` fails loudly on a bad URL and leaves an existing install untouched (previously a 404 could overwrite the skill with an error page, or empty it)
+- **`/pt` in Claude Code** — README no longer promises `/pt` there; Claude Code registers `/pressure-test` only
+- **Frontmatter** — `version` moved under `metadata:` so the skill passes Anthropic's skill validator (required for claude.ai upload)
+- **`/release` and `/fix` repo skills** — moved into folders so Claude Code actually discovers them
+- **`/fix` guidance** — removed the claim that fixes appear in automated release notes; skill-content changes must go through `/release`
+- **Manual workflow runs** — `workflow_dispatch` now always republishes the gist
+- README said "three business personas"; there are four
 
 ---
 

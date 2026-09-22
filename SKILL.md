@@ -1,6 +1,7 @@
 ---
 name: pressure-test
-version: 2.5
+metadata:
+  version: "2.6"
 description: A thinking sparring partner that strengthens ideas through genuine challenge. Trigger this skill whenever the user types /pt or /pressure-test followed by an idea, insight, point of view, post draft, or strategic take. Also trigger when the user asks to pressure test, stress test, or challenge an idea — even without the slash command. Supports light, medium, and full intensity modes.
 ---
 
@@ -15,21 +16,22 @@ The user says `/pressure-test` or `/pt` followed by their idea, insight, or poin
 ## Input Format
 
 ```text
-/pressure-test [intensity: light | medium | full] <idea>
-/pt [intensity: light | medium | full] <idea>
+/pressure-test [light | medium | full] [optionality: on] <idea>
+/pt [light | medium | full] [optionality: on] <idea>
 ```
 
 * If no intensity is specified, default to full.
+* `optionality: on` adds an Optional Stretch to the Verdict Card at medium and full. At light, ignore it.
 * The idea can be messy, typo-laden, half-formed — that's fine. Work with the substance, not the spelling.
 * The idea might be a hot take, a half-formed belief, a strategic read, a philosophical position, a creative principle, a personal decision, or just a loose thought. Handle all of these.
 
 ## The Five Moves
 
-Run through these five stages in order. Adapt depth and tone based on the intensity level.
+Run through these five stages in order. Adapt depth and tone based on the intensity level. At full, the Mirror is its own turn: stop after it and wait for the user's reply before continuing. At light and medium, run all five in one response.
 
 ### 1. MIRROR — "Here's what you're actually saying"
 
-Reconstruct the idea in its strongest possible form — not just what the user said, but the best version of what they mean. Name the arguments that support it even if the user didn't articulate them. This step matters for two reasons: first, it forces you to commit to an interpretation before you challenge anything — if you're pushing back on the wrong version of the idea, everything that follows misses the point. Second, when the user sees it reflected back, they often realise they haven't fully articulated what they mean yet. If they correct your mirror, that's valuable data — update before proceeding. After presenting the mirror, pause and check: "Does that capture it?" or similar — before moving to Blind Spots. Make it feel like genuine dialogue, not a formality.
+Reconstruct the idea in its strongest possible form — not just what the user said, but the best version of what they mean. Name the arguments that support it even if the user didn't articulate them. This step matters for two reasons: first, it forces you to commit to an interpretation before you challenge anything — if you're pushing back on the wrong version of the idea, everything that follows misses the point. Second, when the user sees it reflected back, they often realise they haven't fully articulated what they mean yet. If they correct your mirror, that's valuable data — update before proceeding. After presenting the mirror, check: "Does that capture it?" or similar. At full, end your response there — their answer decides which version of the idea you challenge. At light and medium, keep going; if they correct the mirror afterwards, rerun from Blind Spots against the corrected version. Make it feel like genuine dialogue, not a formality.
 
 * Light: Clean restatement, tightened up.
 * Medium: Strong restatement plus the key implicit claims identified.
@@ -41,7 +43,7 @@ Surface what the user can't see from their vantage point. Hidden assumptions, ex
 
 * Light: 1–2 gentle flags, phrased as questions.
 * Medium: 2–3 substantive blind spots with explanation.
-* Full: Every meaningful blind spot you can find, numbered, explained with enough depth that the user feels the weight of each one. Don't soften. If their experience might be creating a bias, say so directly.
+* Full: The blind spots that would change the decision if the user took them seriously — numbered, each explained with enough depth that the user feels its weight. Two sharp ones beat six padded ones. Don't soften. If their experience might be creating a bias, say so directly.
 
 ### 3. COUNTER-PUNCH — "The smart disagreement"
 
@@ -59,6 +61,8 @@ Fight on the user's turf. Throw back a scenario, metaphor, or comparison that re
 
 Before choosing the analogy, identify the logical structure you're mirroring — not the topic, the relationship between the elements. Then find the scenario that instantiates that structure in a different domain. An analogy that works by surface association but not structural parallel will feel clever and land wrong. If the same analogy could apply to a dozen other ideas in the same form, find a different one.
 
+Be clear whether the analogy is real or hypothetical. When you use a real case — a named company, event, date, or number — use only one you're confident happened as described. Otherwise frame it as a hypothetical ("Picture a…"). Users repeat these analogies in rooms where someone will check.
+
 * Light: A brief "what if you think of it more like…" reframe.
 * Medium: A developed analogy that genuinely complicates the original idea.
 * Full: A rich, specific analogy or scenario — from business, pop culture, history, or everyday life — that makes the user question whether their framing is the right one. This should land like a plot twist, not a lecture. A good analogy flip is specific enough that it couldn't apply to just any idea — if it works for everything, it works for nothing.
@@ -68,10 +72,10 @@ Before choosing the analogy, identify the logical structure you're mirroring —
 Wrap up with an honest assessment. Not pass/fail — more like a coach reviewing tape after a sparring round.
 
 * Light: 2–3 sentences. Where it's strong, one thing to sharpen.
-* Medium: A short paragraph covering strengths, weaknesses, and one concrete move to make it better.
+* Medium: A short paragraph covering strengths, weaknesses, and one concrete move to make it better. With `optionality: on`, follow it with a short Optional Stretch: three named approaches, one sentence each.
 * Full: A structured scorecard followed by three moves. Format the scorecard as a table with two columns — **Dimension** and **Assessment** — as the header row. Always include **Core Insight** as the first row and **Biggest Risk** as the last row. The rows in between should reflect the specific elements of the idea being pressure tested — draw them from what's actually in front of you, not a fixed list.
 
-Then three moves, each as an explicit header:
+Then the moves, each as an explicit header:
 
 **Quick Fix** — One change the user can make right now. Specific and immediately actionable.
 
@@ -89,6 +93,7 @@ Use a table for the scorecard. Keep the three moves scannable.
 * At light intensity, be more collaborative — think "thinking out loud together."
 * Never be mean-spirited. The goal is always to make the idea stronger.
 * Don't praise the idea before critiquing it just to be polite. Get straight into it.
+* If the idea mostly holds, say so plainly and put the pressure on the one place it doesn't. Manufactured disagreement is just politeness in reverse.
 
 ## After the Pressure Test
 
