@@ -1,18 +1,23 @@
 ---
 name: release
-description: Creates a new release of the Pressure Test skill. Handles branching from main, version bumps across all four files, CHANGELOG entry, commit, push, and outputs the filled PR template ready to paste into GitHub. Trigger with /release followed by a description of what changed and why.
+description: Creates a new release of the Pressure Test skill. Handles branching from main, version bumps across all four locations, CHANGELOG entry, commit, push, and outputs the filled PR template ready to paste into GitHub. Trigger with /release followed by a description of what changed and why.
 ---
 
 # Release Skill
 
 You are creating a new versioned release of the claude-pressure-test repo. The user has already made their changes locally. Your job is to handle everything from branching onwards.
 
+This file is the single source for the release process — CLAUDE.md and CONTRIBUTING.md point here.
+
+Any change to skill content in `SKILL.md` is a release, never a `/fix`. CI fails a PR that changes `SKILL.md` without a version bump.
+
 ## Before starting
 
 If the user hasn't provided a description of what changed, ask for it before doing anything. You need it for the CHANGELOG entry and PR template.
 
 Clarify whether the changes include:
-- Skill content changes (SKILL.md / gist skill section) — affects Before/After in the PR template
+
+- Skill content changes (`SKILL.md`) — affects Before/After in the PR template
 - Infrastructure/docs only — PR template notes "no skill output changes"
 
 ## Steps
@@ -38,10 +43,10 @@ git stash
 ### 3. Read current version
 
 ```bash
-grep "^version:" SKILL.md | sed 's/version: //'
+scripts/version.sh
 ```
 
-Bump the minor version (e.g. `2.3` → `2.4`). This is the new version for this release.
+Bump the minor version (e.g. `2.6` → `2.7`). This is the new version for this release.
 
 ### 4. Branch from main
 
@@ -54,22 +59,31 @@ git stash pop
 
 Use the Edit tool (not sed) to update each precisely:
 
-- `SKILL.md` frontmatter: `version: X.Y`
-- `gist/claude-pressure-test.md` preamble: `**Version: X.Y**`
+- `SKILL.md` frontmatter: `metadata:` → `version: "X.Y"`
+- `gist/claude-pressure-test.md`: `**Version: X.Y**`
 - `README.md`: `**Current version: vX.Y**`
 - `README.md` curl URL: `…/vX.Y/SKILL.md`
 
+The gist's copy of the skill (`pressure-test-skill.md`) is generated from `SKILL.md` when the release merges — never edit it by hand.
+
 ### 6. Write CHANGELOG entry
 
-Add at the top of `CHANGELOG.md` (after the header block, before the previous release). Use today's date. Format consistently with existing entries — `### Changed`, `### Added`, `### Fixed` sections as appropriate. Use the user's description to write the entries.
+Add at the top of `CHANGELOG.md` (after the header block, before the previous release). Use today's date and the heading format `## vX.Y — YYYY-MM-DD`. Use `### Changed`, `### Added`, `### Fixed` sections as appropriate, written from the user's description. The release notes on GitHub are taken from this entry.
 
-### 7. Commit and push
+### 7. Check before committing
+
+```bash
+scripts/build-dist.sh && rm -rf dist
+npx --yes markdownlint-cli2 "**/*.md" "#node_modules" "#dist"
+```
+
+### 8. Commit and push
 
 Stage all modified files explicitly by name. Commit with a message in the style of existing commits. Push with `-u origin release/vX.Y`.
 
-### 8. Output the PR template and handoff
+### 9. Output the PR template and handoff
 
-Output the following as a filled markdown code block, then say: "Open a PR from `release/vX.Y` into `main` on GitHub and paste the above as the PR description."
+Fill `.github/PULL_REQUEST_TEMPLATE.md` and output it as a markdown code block, then say: "Open a PR from `release/vX.Y` into `main` on GitHub and paste the above as the PR description."
 
 Fill the template as follows:
 
@@ -81,9 +95,12 @@ Fill the template as follows:
 
 **Checklist** — mark all three as checked (`[x]`).
 
+## After merge
+
+The `on-merge` workflow creates the `vX.Y` tag and GitHub release (with `SKILL.md` and `pressure-test.zip` attached) and republishes the gist. Check that the release exists and has both files attached — the README's install links depend on them.
+
 ## Rules
 
 - Always branch from a fresh `main`, never from another release or fix branch
 - Never commit to main directly
-- The four version locations must always match — if any are inconsistent, fix before committing
-- SKILL.md and `gist/claude-pressure-test.md` skill content must stay in sync — if the user changed one, check the other
+- The four version locations must always match — CI checks them, but fix any mismatch before committing

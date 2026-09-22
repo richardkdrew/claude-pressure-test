@@ -22,14 +22,15 @@ Intensity levels let you dial from a collaborative think-out-loud (`light`) to a
 
 ## Get Started
 
-### Option A — Claude.ai or mobile (no install)
+### Option A — Claude.ai, desktop, or mobile (no install)
 
-The simplest path. Works on web, desktop, and mobile.
+Everything for claude.ai users lives in the [claude-pressure-test gist](https://gist.github.com/richardkdrew/c062631fdfee41fac10e815973576407). Pick one:
 
-1. Open the [claude-pressure-test gist](https://gist.github.com/richardkdrew/c062631fdfee41fac10e815973576407) and copy everything from `# Pressure Test` to the end
-2. Open [claude.ai](https://claude.ai) and create a new Project
-3. Go to the project's **Custom instructions**, paste, and save
-4. Open any conversation inside that project and use `/pt` or `/pressure-test`
+- **Skill upload** (paid plans; works in every chat) — download [pressure-test.zip](https://github.com/richardkdrew/claude-pressure-test/releases/latest/download/pressure-test.zip), then in Claude open **Settings → Capabilities**, find **Skills**, and upload it.
+- **Project** (any plan; works inside that Project) — open the [skill file](https://gist.githubusercontent.com/richardkdrew/c062631fdfee41fac10e815973576407/raw/pressure-test-skill.md), select all, copy, and paste it into a Project's **Instructions**.
+- **One-off** — paste the same [skill file](https://gist.githubusercontent.com/richardkdrew/c062631fdfee41fac10e815973576407/raw/pressure-test-skill.md) at the start of any conversation.
+
+Then type `/pt` or `/pressure-test` followed by your idea. To update, repeat the same steps — the links always point to the latest version.
 
 ### Sharing with colleagues
 
@@ -37,24 +38,36 @@ If you want to share this with non-technical colleagues, send them the [gist lin
 
 ### Option B — Claude Code (CLI, desktop app, IDE)
 
-**Current version: v2.4**
+**Current version: v2.6**
 
 ```bash
-curl -sL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.4/SKILL.md \
-  > ~/.claude/skills/pressure-test.md
+mkdir -p ~/.claude/skills/pressure-test && \
+curl -fsSL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v2.6/SKILL.md \
+  -o ~/.claude/skills/pressure-test/SKILL.md
 ```
 
-Restart Claude Code — the skill is auto-discovered and responds to `/pt` and `/pressure-test`.
+Then use `/pressure-test` followed by your idea, or just ask Claude to "pressure test" something. In Claude Code the command is `/pressure-test` — `/pt` isn't a registered command there. If `/pressure-test` doesn't appear, start a new Claude Code session.
+
+To share it with a team through a repo instead, put the same file at `.claude/skills/pressure-test/SKILL.md` in that repo.
 
 To check your installed version:
 
 ```bash
-grep "^version:" ~/.claude/skills/pressure-test.md
+grep "version:" ~/.claude/skills/pressure-test/SKILL.md
+```
+
+To update to the latest release:
+
+```bash
+curl -fsSL https://github.com/richardkdrew/claude-pressure-test/releases/latest/download/SKILL.md \
+  -o ~/.claude/skills/pressure-test/SKILL.md
 ```
 
 ---
 
 ## Usage
+
+The examples use `/pt`. In Claude Code, type `/pressure-test` instead.
 
 ### Basic
 
@@ -78,7 +91,7 @@ grep "^version:" ~/.claude/skills/pressure-test.md
 /pt full optionality: on We should sunset our legacy API and force migration within 6 months.
 ```
 
-When `optionality: on` is set, the Verdict Card includes an **Optional Stretch** section with three named alternative approaches, each described in 2–3 sentences.
+When `optionality: on` is set, the Verdict Card includes an **Optional Stretch** section with three named alternative approaches — 2–3 sentences each at `full`, one sentence each at `medium`. It's ignored at `light`.
 
 ### Intensity levels
 
@@ -86,9 +99,11 @@ When `optionality: on` is set, the Verdict Card includes an **Optional Stretch**
 | ------- | -------- | ------------- | --------------- | -------------- | -------------- |
 | `light` | Clean restatement | 1–2 gentle flags | Skipped | Brief reframe | 2–3 sentences |
 | `medium` | + implicit claims | 2–3 with explanation | 2–3 sentences | Developed analogy | Short paragraph |
-| `full` | + all assumptions named | Numbered, full weight | Voiced archetype, italicised | Rich scenario, specific | Scorecard table + three moves |
+| `full` | + all assumptions named, then waits for you | Numbered, only the ones that change the decision | Voiced archetype, italicised | Rich scenario, specific | Scorecard table + moves |
 
 **Default intensity is `full` if none is specified.**
+
+At `full`, Claude stops after the Mirror to check it has understood you before it challenges anything — reply to confirm or correct it, and the rest follows. `light` and `medium` run in a single response.
 
 For short punchy takes — a hot take, a one-sentence claim, a quick POV — `medium` typically delivers more useful output than `full`. The scorecard table in a full Verdict Card suits a developed argument; on a punchy claim it adds distance instead of sharpness.
 
@@ -132,7 +147,9 @@ For short punchy takes — a hot take, a one-sentence claim, a quick POV — `me
 /pt medium We need to productise before we hire more salespeople — the delivery model is too bespoke to scale.
 ```
 
-See [examples/](examples/) for full annotated runs across three business personas at different intensity levels.
+The more context you give, the sharper the challenge — paste the background before the command and it's treated as part of the idea.
+
+See [examples/](examples/) for full annotated runs across four business personas at different intensity levels.
 
 ---
 

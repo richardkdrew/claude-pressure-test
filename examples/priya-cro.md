@@ -24,6 +24,8 @@ How to build a scalable revenue function at a firm where delivery is bespoke, pr
 ## Run: `/pt light`
 
 > `/pt light The reason we can't scale sales is that our delivery model is too bespoke — we need to productise before we hire more salespeople.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -53,6 +55,8 @@ The diagnosis is real — no repeatable motion is a genuine ceiling. But the seq
 ## Run: `/pt full`
 
 > `/pt full The reason we can't scale sales is that our delivery model is too bespoke — we need to productise before we hire more salespeople.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -69,6 +73,10 @@ The load-bearing assumptions are:
 
 Does that capture it?
 
+*Claude waits for a reply.*
+
+> **Priya:** Yes, that's the sequence I'm arguing for.
+
 ### Blind Spots
 
 1. **You're diagnosing from delivery, not from pipeline.** You haven't run enough sales conversations yourself to know whether bespoke delivery is the bottleneck. It's possible — likely, even — that the real friction is earlier: positioning is murky, the firm doesn't have a clear wedge, prospects can't self-qualify. Productisation solves none of that. You could ship a clean three-SKU service menu and still have salespeople who can't explain why a prospect should pick this firm over a cheaper offshore option. The product is not the pitch.
@@ -83,7 +91,7 @@ Does that capture it?
 
 ### Counter-Punch
 
-Here's what a Managing Director who scaled a boutique strategy practice from $5M to $40M on a deliberately variable delivery model would say back:
+Here's what a Managing Director who ran a Big Four practice, then scaled a boutique from $5M to $40M on a deliberately variable delivery model, would say back:
 
 *"I ran the largest practice in a Big Four firm for three years before moving into a growth role at a boutique. Here's what I know that you don't yet: we had the most productised service menu in the market — defined methodologies, fixed-price tiers, implementation playbooks, the lot. Beautiful slide decks. Partners couldn't sell any of it. Because the people selling it hadn't built it, didn't believe in it, and couldn't answer a client's second question. What finally worked — and this took us two years to figure out — was hiring one rainmaker and letting her run deals the way she wanted to run them. Messy, bespoke, high-touch. Then we watched her closely enough to understand what she was actually selling underneath the customisation: a specific outcome, articulated in a specific way, to a specific buyer profile. That insight took six months of live deals to surface. It could not have been derived from an internal productisation project. The product that emerged was accurate because it came from the market, not from a workshop. You're proposing to productise before you have that signal. You'll build something internally coherent and market-irrelevant."*
 
@@ -91,9 +99,13 @@ Here's what a Managing Director who scaled a boutique strategy practice from $5M
 
 The logical structure of your argument is: you need to standardise the thing before you can scale the people who sell it. The inversion worth sitting with: sometimes the salespeople create the product clarity.
 
-IBM's professional services arm in the mid-to-late 1980s was deeply bespoke — every major systems integration engagement was custom-scoped, custom-staffed, custom-priced. IBM's internal response was to try to productise: define reference architectures, standard engagement models, repeatable methodologies. Those efforts produced documentation that nobody used and proposals that clients still negotiated from scratch. What actually built the business — and what became the foundation for IBM Global Services as a scalable unit — was a cohort of senior client executives given licence to run deals their own way, at scale, with enough volume that patterns emerged from the outside in. The product definition came *after* those salespeople had run enough engagements to show leadership what clients were actually buying.
+Picture two architecture practices of the same size, both drowning in bespoke work.
 
-The parallel is structural: in both cases, a high-expertise firm with bespoke delivery assumed product clarity had to precede sales scale. IBM discovered that inverting that sequence — hiring sales capacity first, mining it for product signal — produced the clarity that internal productisation efforts had failed to generate.
+The first spends six months building a standard offer — three packages, fixed fees, a polished brochure. It's elegant. Prospects read it and ask for "something like package two, but…" until every deal is bespoke again, now with a discount attached.
+
+The second hires one senior partner with a network and lets her take whatever work she can win for six months, on one condition: after every pitch, she writes down what the client actually bought and why. By month six the pattern is obvious — three kinds of client, and one outcome each of them is really paying for. The packages that follow are accurate because they came out of the market, not out of a workshop.
+
+The parallel is structural: both firms had the same problem and the same instinct to standardise. Only one of them let the selling tell them what to standardise. Productise-first is the first firm's experiment.
 
 ### Verdict Card
 

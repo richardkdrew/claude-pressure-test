@@ -24,6 +24,8 @@ Whether to pause feature development for a quarter to modularise the platform �
 ## Run: `/pt light`
 
 > `/pt light We should pause feature development for a quarter and modularise the platform — if we don't, the next year of growth will break us.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -53,6 +55,8 @@ The underlying logic is sound: bounded pain now versus unbounded pain later is u
 ## Run: `/pt full`
 
 > `/pt full We should pause feature development for a quarter and modularise the platform — if we don't, the next year of growth will break us.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -63,6 +67,10 @@ You're making a structural argument, not just a technical one. The monolith isn'
 The load-bearing assumption underneath your proposal: the cost of a controlled pause now — one quarter, scoped, on your terms — is less than the cost of an uncontrolled crisis later, when failure happens during a critical sales cycle or after you've hired another twenty engineers into the same broken system. You're not asking for permission to go slow. You're arguing that going slow now is the only way to go fast on the timeline the board actually cares about.
 
 Does that capture it?
+
+*Claude waits for a reply.*
+
+> **Sarah:** Yes — that's the argument.
 
 ### Blind Spots
 
@@ -82,9 +90,9 @@ Here's what the VP of Sales who just closed your two largest enterprise deals wo
 
 ### Analogy Flip
 
-A mining company discovers early survey data suggesting a primary shaft has a slow fracture developing — manageable now with a two-week closure and controlled reinforcement, but likely catastrophic in six to eighteen months if left. Management delays the closure because the shaft is currently at peak output and a two-week shutdown costs $4M. Eighteen months later the fracture propagates during maximum load. The shaft is condemned, the closure is now six months instead of two weeks, and the total cost is twelve times the original estimate — plus an inquiry, plus the reputational hit with insurers. The fracture didn't wait for a convenient moment. It just got bigger until it picked its own.
+Picture a mining company that discovers early survey data suggesting a primary shaft has a slow fracture developing — manageable now with a two-week closure and controlled reinforcement, but likely catastrophic in six to eighteen months if left. Management delays the closure because the shaft is currently at peak output and a two-week shutdown costs $4M. Eighteen months later the fracture propagates during maximum load. The shaft is condemned, the closure is now six months instead of two weeks, and the total cost is twelve times the original estimate — plus an inquiry, plus the reputational hit with insurers. The fracture didn't wait for a convenient moment. It just got bigger until it picked its own.
 
-The structure is identical to yours: a bounded, painful intervention now versus an unbounded, uncontrolled failure later. The mining case adds one element worth sitting with — the people who delayed the closure had strong incentives and seemingly good reasons. So do your board and your VP of Sales. That doesn't make them wrong to push back. It means the argument you need to win isn't technical. It's about who controls the timing.
+The structure is identical to yours: a bounded, painful intervention now versus an unbounded, uncontrolled failure later. The mining scenario adds one element worth sitting with — the people who delayed the closure had strong incentives and seemingly good reasons. So do your board and your VP of Sales. That doesn't make them wrong to push back. It means the argument you need to win isn't technical. It's about who controls the timing.
 
 ### Verdict Card
 

@@ -34,6 +34,8 @@ Changes that drift toward comprehensiveness, hedging, or academic structure are 
 3. Open a PR with a clear description of what you changed and why
 4. If there's a behaviour you're fixing, show a before/after example if you can
 
+Edit skill content in `SKILL.md` only — the gist's copy is generated from it.
+
 ---
 
 ## What to Expect
@@ -44,15 +46,9 @@ I'll read every PR. I won't always respond immediately, but I will respond. If s
 
 ## Releasing
 
-When changes to SKILL.md or the gist are ready to ship:
+Contributors don't need to bump versions — edit `SKILL.md` and open your PR. CI will flag the missing version bump; I'll add it before merging.
 
-1. Bump `version:` in the SKILL.md frontmatter (e.g. `2.2` → `2.3`)
-2. Update the version in the gist preamble to match
-3. Add an entry to CHANGELOG.md
-4. Update the version number in the README.md Option B curl URL
-5. Commit, push, open PR, merge
-
-After merge, the `on-merge` workflow runs automatically — it publishes the updated gist and creates the GitHub release and tag.
+For maintainers, the release checklist lives in [`.claude/skills/release/SKILL.md`](.claude/skills/release/SKILL.md) (run it with `/release` in Claude Code).
 
 ---
 

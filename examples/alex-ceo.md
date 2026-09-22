@@ -24,6 +24,8 @@ Whether to act on the productivity data by restructuring the team — and if so,
 ## Run: `/pt full`
 
 > `/pt full The productivity data is clear — AI has changed what we need from our team. When we lose people naturally, we shouldn't backfill. And for some roles, we probably shouldn't wait for attrition.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -32,6 +34,10 @@ Whether to act on the productivity data by restructuring the team — and if so,
 You're measuring output, and the output data is real. AI has compressed a week of work into a day across a dozen roles. The board has noticed twice. You're not doing this because you want to — you're doing it because the numbers already tell a story, and if you don't write the next chapter on your terms, someone else will write it for you. The plan: let attrition do the slow work, and where the math is clearest, move proactively. This is disciplined, not punitive. You're running a 55-person firm, not a FTSE 100 — there's no cushion to absorb headcount that's been structurally displaced.
 
 That the right picture?
+
+*Claude waits for a reply.*
+
+> **Alex:** Yes, that's where I am.
 
 ### Blind Spots
 
@@ -55,13 +61,13 @@ Here's what a senior employment solicitor who has worked through the aftermath o
 
 ### Analogy Flip
 
-British coal preparation plants, 1985–1992.
+Picture an airline that replaces most of its gate agents with self-service kiosks and automated rebooking.
 
-When automated coal preparation machinery was introduced at UK collieries in the mid-1980s, the efficiency case was unambiguous — mechanised separation and washing of coal required a fraction of the workforce that manual preparation had. The plants restructured. What the throughput data didn't capture was the role of preparation workers as informal quality monitors: they were the people whose hands and eyes detected inconsistencies in coal grade, moisture content, and contamination in real time. That sensory knowledge — built over careers — was not documented, was not systematised, and was not transferable to the automated systems.
+The efficiency case is unambiguous: boarding passes, seat changes, and rebookings that took an agent five minutes now take thirty seconds, and the kiosks never call in sick. What the throughput data never showed was the other work those agents did — spotting the passenger who was about to miss a tight connection, calming a family before a complaint turned into a scene, knowing which inbound flight always ran late and quietly holding the door for its connecting crew. None of it was in the job description. None of it was in the metrics.
 
-Within four years, several plants were experiencing grade specification failures and contamination complaints that the automated systems flagged only after the fact. The informal quality-assurance layer had been treated as overhead. It was actually a control mechanism, running in parallel with the productive work, invisible to the efficiency analysts because it looked like the same job.
+A year later, missed connections are up, complaint volumes are up, and delay minutes are being logged as "operational factors." Nobody traces them back to the gate, because the gate agents' coordination work never appeared anywhere as work.
 
-The structure is identical to yours: highly visible productive output is automated, workers are reduced, the invisible parallel work they were doing — quality calibration, contextual judgment, error interception — turns out not to have been automated at all. It just stops being done. The failures arrive downstream, attributed to other causes, unconnected in the post-mortem to the restructuring decision.
+The structure is identical to yours: highly visible productive output is automated, people are reduced, and the invisible parallel work they were doing — coordination, contextual judgment, error interception — turns out not to have been automated at all. It just stops being done. The failures arrive downstream, attributed to other causes, unconnected in the post-mortem to the restructuring decision.
 
 ### Verdict Card
 
@@ -87,6 +93,8 @@ The structure is identical to yours: highly visible productive output is automat
 ## Run: `/pt full optionality: on`
 
 > `/pt full optionality: on The productivity data is clear — AI has changed what we need from our team. When we lose people naturally, we shouldn't backfill. And for some roles, we probably shouldn't wait for attrition.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -95,6 +103,10 @@ The structure is identical to yours: highly visible productive output is automat
 The productivity data isn't a hypothesis — it's operational fact. One day of output now equals one week from eight months ago in a dozen roles across your firm. That's not efficiency at the margin; that's a structural change to the input-output equation of your business. The load-bearing assumption in your thinking: the work that used to require five people now genuinely requires one, and the other four aren't doing anything that creates value that isn't visible in your current metrics. From that premise, the conclusion follows. Attrition-first is the humane path, and if you wait too long the board forces the decision on worse terms — a reactive cut that damages morale more than a deliberate one. Acting now, on your terms, while you can design severance and sequencing thoughtfully, is arguably the more responsible version.
 
 Does that capture where you are — and is the "value not visible in metrics" assumption one you're confident about, or is that actually the open question?
+
+*Claude waits for a reply.*
+
+> **Alex:** Honestly, that's the open question.
 
 ### Blind Spots
 

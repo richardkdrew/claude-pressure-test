@@ -1,4 +1,4 @@
-name: Version consistency check
+name: PR checks
 
 on:
   pull_request:
@@ -11,26 +11,64 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Verify version matches across files
         run: |
-          VERSION=$(grep "^version:" SKILL.md | sed 's/version: //')
+          VERSION=$(scripts/version.sh)
           FAIL=0
 
-          grep -q "v${VERSION}" README.md || {
-            echo "README.md does not reference v${VERSION}"
+          [ -n "$VERSION" ] || { echo "Could not read metadata.version from SKILL.md"; exit 1; }
+
+          grep -qF "**Current version: v${VERSION}**" README.md || {
+            echo "README.md 'Current version' line does not say v${VERSION}"
             FAIL=1
           }
 
-          grep -q "Version: ${VERSION}" gist/claude-pressure-test.md || {
-            echo "gist/claude-pressure-test.md does not reference Version: ${VERSION}"
+          grep -qF "/v${VERSION}/SKILL.md" README.md || {
+            echo "README.md curl URL does not point at v${VERSION}"
             FAIL=1
           }
 
-          grep -q "^## v${VERSION}" CHANGELOG.md || {
+          grep -qF "**Version: ${VERSION}**" gist/claude-pressure-test.md || {
+            echo "gist/claude-pressure-test.md does not say Version: ${VERSION}"
+            FAIL=1
+          }
+
+          grep -q "^## v${VERSION} " CHANGELOG.md || {
             echo "CHANGELOG.md has no entry for v${VERSION}"
             FAIL=1
           }
 
           [ $FAIL -eq 0 ] && echo "All version references consistent: v${VERSION}"
           exit $FAIL
+
+      - name: Require a version bump when SKILL.md changes
+        run: |
+          BASE="origin/${{ github.base_ref }}"
+          if git diff --quiet "$BASE"...HEAD -- SKILL.md; then
+            echo "SKILL.md unchanged"
+            exit 0
+          fi
+          git show "$BASE:SKILL.md" > "$RUNNER_TEMP/base-skill.md"
+          BASE_VERSION=$(scripts/version.sh "$RUNNER_TEMP/base-skill.md")
+          VERSION=$(scripts/version.sh)
+          if [ "$VERSION" = "$BASE_VERSION" ]; then
+            echo "SKILL.md changed but version is still ${VERSION} — skill changes ship as a release (use /release)"
+            exit 1
+          fi
+          echo "Version bumped: ${BASE_VERSION} -> ${VERSION}"
+
+      - name: Check the dist build
+        run: scripts/build-dist.sh
+
+  markdownlint:
+    name: Lint markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx --yes markdownlint-cli2 "**/*.md" "#node_modules" "#dist"

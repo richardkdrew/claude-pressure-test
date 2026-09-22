@@ -2,14 +2,17 @@
 
 ## What this repo is
 
-A Claude skill that acts as a thinking sparring partner. The canonical skill is `SKILL.md`. The gist (`gist/claude-pressure-test.md`) is the primary distribution artifact for claude.ai users.
+A Claude skill that acts as a thinking sparring partner. The canonical skill is `SKILL.md`. The gist is the primary distribution artifact for claude.ai users.
 
 ## Key files
 
 | File | Purpose |
 | ---- | ------- |
-| `SKILL.md` | Canonical skill — installed via Claude Code Option B |
-| `gist/claude-pressure-test.md` | Distribution artifact for claude.ai / Option A users |
+| `SKILL.md` | Canonical skill — the only copy of the skill content |
+| `gist/claude-pressure-test.md` | Setup guide shown first in the gist (hand-edited) |
+| `scripts/build-dist.sh` | Builds the gist's skill file and the release assets from `SKILL.md` |
+| `scripts/version.sh` | Reads the version from `SKILL.md` frontmatter (`metadata.version`) |
+| `.claude/skills/release/`, `.claude/skills/fix/` | `/release` and `/fix` — the release and fix workflows |
 | `examples/` | Annotated example runs across four personas |
 | `CHANGELOG.md` | Version history |
 | `CONTRIBUTING.md` | Contribution guidelines and release checklist |
@@ -18,26 +21,13 @@ A Claude skill that acts as a thinking sparring partner. The canonical skill is 
 
 Always branch new releases from `main`, not from a previous release branch — branching from a release branch causes merge conflicts when the earlier PR is merged via GitHub's merge commit.
 
-```bash
-git checkout main && git pull && git checkout -b release/vX.Y
-```
+Use `/release` for anything that changes skill content and `/fix` for small doc corrections. The full checklist lives in `.claude/skills/release/SKILL.md` — that file is the single source; don't duplicate it here.
 
-When making changes to `SKILL.md` or `gist/claude-pressure-test.md`, follow this checklist:
+After merge, the `on-merge` workflow creates the GitHub release and tag (with `SKILL.md` and `pressure-test.zip` attached) and republishes the gist.
 
-1. Bump `version:` in `SKILL.md` frontmatter (e.g. `2.2` → `2.3`)
-2. Update the version in the gist preamble to match
-3. Add an entry to `CHANGELOG.md`
-4. Update the version number in the `README.md` Option B curl URL
-5. Commit, push, open PR, merge
+## The gist is generated from SKILL.md
 
-After merge, the `on-merge` workflow runs automatically and handles:
-
-- Publishing the updated gist
-- Creating the GitHub release and tag from the version in `SKILL.md`
-
-## SKILL.md and the gist must stay in sync
-
-Any change to the skill content in `SKILL.md` must be mirrored to `gist/claude-pressure-test.md`. The gist contains the full skill content after its preamble section (from `# Pressure Test` to the end).
+The gist has two files: `claude-pressure-test.md` (the setup guide, from `gist/claude-pressure-test.md`) and `pressure-test-skill.md` (the skill body, generated from `SKILL.md` at publish time). Edit skill content only in `SKILL.md`. There is no second copy to keep in sync.
 
 ## Pull requests
 

@@ -26,6 +26,8 @@ Whether to acquire a small fintech outright rather than attempting to build digi
 ## Run: `/pt medium`
 
 > `/pt medium We should acquire a small fintech rather than trying to build digital capabilities in-house — we can't win the talent war and we're running out of time.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -64,6 +66,8 @@ The core instinct — that building in-house at your scale and timeline is the w
 ## Run: `/pt full optionality: on`
 
 > `/pt full optionality: on We should acquire a small fintech rather than trying to build digital capabilities in-house — we can't win the talent war and we're running out of time.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
@@ -74,6 +78,10 @@ You're watching three fintechs systematically dismantle your customer relationsh
 The load-bearing assumptions under that are: the right acquisition target exists and is acquirable at a price that makes sense; the team will stay post-acquisition; the technology will integrate into your stack without eating the next two years in engineering debt; and the capability you buy is actually the capability you need. Each of those is doing serious work in your argument.
 
 Does that capture the bet you're making?
+
+*Claude waits for a reply.*
+
+> **Marcus:** Yes — that's the bet.
 
 ### Blind Spots
 
@@ -97,9 +105,9 @@ The archetype here is a fintech founder who sold to a bank and watched what happ
 
 The structural tension: you can buy a capability, but you cannot always buy the environment that produces and sustains the capability. When the environment is the source of value — not the current output — the acquisition decays from the moment it closes.
 
-In 2013, Yahoo paid $1.1 billion for Tumblr. The logic was almost identical to yours: Yahoo was losing the talent war for young digital engineers, the competitive window was closing, and Tumblr came packaged with a product team, a platform, and — critically — a culture that Yahoo couldn't replicate from scratch. The CEO publicly promised not to screw it up.
+In 2013, Yahoo paid $1.1 billion for Tumblr. The logic rhymed with yours: Yahoo wanted a young audience and a product team it couldn't grow from the inside, and buying one looked faster than building one. Its CEO publicly promised not to screw it up.
 
-Within two years, the talent was leaving. The non-commercial values that had built Tumblr's community were overridden by revenue pressure. Advertising formats the founders had deliberately avoided were introduced. Product decisions were routed through Yahoo's content strategy teams. The team that understood how to build for that specific audience — the environment that had produced the capability — was incompatible with Yahoo's governance structure. Not because Yahoo was incompetent. Because a public company with quarterly targets cannot sustain the conditions that produced a creative platform built on deliberate restraint. By the time the assets sold, Tumblr was written down to near zero from the $1.1 billion paid.
+What followed is a matter of record. Tumblr was pulled into Yahoo's advertising and sales machinery. Yahoo went on to write down most of what it had paid. In 2019, Tumblr was sold on for a price reported to be a few million dollars. Yahoo didn't set out to destroy what it bought — a public company under revenue pressure simply couldn't sustain the conditions that had made Tumblr worth buying.
 
 The question for Marcus isn't "can I acquire a fintech?" It's "can I create an environment where the people I acquire can keep doing what made them worth acquiring?" If the answer is no, you're buying a snapshot, not a capability.
 

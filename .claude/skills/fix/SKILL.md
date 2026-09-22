@@ -1,11 +1,13 @@
 ---
 name: fix
-description: Creates a fix branch for a small correction that doesn't warrant a version bump — typos, missing URLs, doc corrections, gist preamble tweaks. No version bump, no CHANGELOG entry. Handles branching from main, commit, push, and outputs the filled PR template ready to paste into GitHub. Trigger with /fix followed by a short description of what was fixed.
+description: Creates a fix branch for a small correction that doesn't warrant a version bump — typos, missing URLs, doc corrections, gist setup-guide tweaks. Never for changes to skill content in SKILL.md — those are releases. No version bump, no CHANGELOG entry. Handles branching from main, commit, push, and outputs the filled PR template ready to paste into GitHub. Trigger with /fix followed by a short description of what was fixed.
 ---
 
 # Fix Skill
 
-You are creating a fix branch for a small correction in the claude-pressure-test repo. The user has already made their changes locally. No version bump. No CHANGELOG entry. The on-merge workflow will auto-publish the gist if `gist/claude-pressure-test.md` changed, and will skip release creation since the version hasn't changed.
+You are creating a fix branch for a small correction in the claude-pressure-test repo. The user has already made their changes locally. No version bump. No CHANGELOG entry. The on-merge workflow will republish the gist if `gist/claude-pressure-test.md` changed, and will skip release creation since the version hasn't changed.
+
+If the change touches skill content in `SKILL.md`, stop and use `/release` instead — CI fails a PR that changes `SKILL.md` without a version bump, and Claude Code users pinned to a tag would never get the change.
 
 ## Before starting
 
@@ -65,4 +67,5 @@ Fill the template as follows:
 - Always branch from a fresh `main`, never from a release or another fix branch
 - Never commit to main directly
 - No version bumps — if the fix warrants a version bump, use `/release` instead
-- No CHANGELOG entry — fixes are covered by the automated release notes
+- No CHANGELOG entry — fixes don't create a release, so they don't appear in release notes
+- No changes to `SKILL.md` — skill content changes are always a `/release`

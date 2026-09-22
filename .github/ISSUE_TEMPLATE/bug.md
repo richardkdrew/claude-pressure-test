@@ -14,10 +14,10 @@ labels: bug
 
 ## Input
 
-<!-- The exact /pt command and idea you used -->
+<!-- The exact /pt command and idea you used, including any optionality setting -->
 
 ```text
-/pt [intensity] [idea]
+/pt [intensity] [optionality: on] [idea]
 ```
 
 ## Intensity level
@@ -25,6 +25,14 @@ labels: bug
 - [ ] light
 - [ ] medium
 - [ ] full
+
+## Where you ran it
+
+- [ ] claude.ai skill upload
+- [ ] claude.ai Project or pasted into a chat
+- [ ] Claude Code
+
+Version (from the gist or `grep "version:"` on your SKILL.md):
 
 ## Notes
 
