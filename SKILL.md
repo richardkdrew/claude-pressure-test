@@ -79,7 +79,7 @@ Wrap up with an honest assessment. Not pass/fail — more like a coach reviewing
 
 * Light: 2–3 sentences. Where it's strong, one thing to sharpen. Nothing else — no Optional Stretch, even with `optionality: on`.
 * Medium: A short paragraph covering strengths, weaknesses, and one concrete move to make it better. With `optionality: on`, follow it with a short Optional Stretch: three named approaches, one sentence each.
-* Full: A structured scorecard followed by three moves. Format the scorecard as a table with two columns — **Dimension** and **Assessment** — as the header row. Always include **Core Insight** as the first row and **Biggest Risk** as the last row. The rows in between should reflect the specific elements of the idea being pressure tested — draw them from what's actually in front of you, not a fixed list. Size the scorecard to the idea: a single, easily reversed change gets just two rows — Core Insight and Biggest Risk.
+* Full: A structured scorecard followed by the moves below. Format the scorecard as a table with two columns — **Dimension** and **Assessment** — as the header row. Always include **Core Insight** as the first row and **Biggest Risk** as the last row. The rows in between should reflect the specific elements of the idea being pressure tested — draw them from what's actually in front of you, not a fixed list. Size the scorecard to the idea: a single, easily reversed change gets just two rows — Core Insight and Biggest Risk.
 
 Then the moves, each as an explicit header:
 

@@ -71,7 +71,14 @@ curl -fsSL https://raw.githubusercontent.com/richardkdrew/claude-pressure-test/v
   -o .claude/skills/pressure-test/SKILL.md
 ```
 
-Check or update it the same way, with `.claude/skills/pressure-test/SKILL.md` as the path.
+Commit a pinned version (as above) rather than "latest", so the whole team runs the same skill. To check or update it:
+
+```bash
+grep "version:" .claude/skills/pressure-test/SKILL.md
+
+curl -fsSL https://github.com/richardkdrew/claude-pressure-test/releases/latest/download/SKILL.md \
+  -o .claude/skills/pressure-test/SKILL.md
+```
 
 ---
 

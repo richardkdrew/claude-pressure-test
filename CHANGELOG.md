@@ -27,13 +27,13 @@ Driven by six independent persona reviews of v2.6 (about 45 real conversations) 
 
 ### Added
 
-- **Behaviour evals** — `evals/cases.json` and `scripts/run-evals.sh`: 15 cases run as real conversations through `claude -p`, scripted checks plus a judge model. Runs use `--setting-sources project` so the tester's own plugins, hooks, and CLAUDE.md don't leak in. Usage-limit and API errors are reported as ERROR, not FAIL. Run before releases that change skill content; `/release` now includes the step. v2.6 → v2.7 on the same cases, 2 reps each: **58 → 70 of 76 checks**
+- **Behaviour evals** — `evals/cases.json` and `scripts/run-evals.sh`: 15 cases run as real conversations through `claude -p`, scripted checks plus a judge model. Runs use `--setting-sources project` so the tester's own plugins, hooks, and CLAUDE.md don't leak in. Usage-limit and API errors are reported as ERROR, not FAIL. Run before releases that change skill content; `/release` now includes the step. v2.6 → v2.7 on the same cases, 2 reps each: **58 → 70 of 76 checks** (a small sample — directional, not precise)
 - **CI** — fails if any versioned URL in the README doesn't match the current version
 
 ### Fixed
 
 - **Optional Stretch length** — "two to three sentences" now applies at full only; medium is one sentence per approach, as documented in v2.6
-- **No preamble** — the skill now says to open with the Mirror. The "Using the pressure-test skill…" line reported in the v2.6 reviews was most likely injected by the reviewers' own Claude Code plugins rather than the skill; the evals now isolate against that
+- **No preamble** — the skill now says to open with the Mirror. Some of the "Using the pressure-test skill…" lines reported in the v2.6 reviews came from the reviewers' own Claude Code plugins, which the evals now isolate against; isolated runs still occasionally open with a short preamble
 
 ---
 

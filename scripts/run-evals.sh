@@ -38,11 +38,13 @@ if [ "${1:-}" = "--run-one" ]; then
     case "$MSG" in /*) MSG=" $MSG" ;; esac
     CONT=(); [ "$i" -gt 0 ] && CONT=(--continue)
     (cd "$WORK" && claude -p --setting-sources project ${CONT[@]+"${CONT[@]}"} --model "$MODEL" --append-system-prompt "$(cat "$SKILL")" "$MSG" < /dev/null) \
-      > "$DIR/turn$((i + 1)).md" 2>&1 || true
+      > "$DIR/turn$((i + 1)).md" 2> "$DIR/turn$((i + 1)).err" || echo $? > "$DIR/turn$((i + 1)).exit"
   done
 
-  # A usage-limit or API error isn't a result — record it as ERROR and skip grading.
-  if grep -qiE "hit your (session|usage) limit|API Error|rate limit" "$DIR"/turn*.md; then
+  # A failed call or usage-limit reply isn't a result — record it as ERROR and skip grading.
+  # Judged by exit code and the reply's first line, not its content (a reply may discuss rate limits).
+  if ls "$DIR"/turn*.exit >/dev/null 2>&1 \
+    || head -qn1 "$DIR"/turn*.md | grep -qiE "^(you've hit your (session|usage) limit|api error)"; then
     record ERROR "claude -p returned an error or usage-limit message; rerun this case"
     rm -rf "$WORK"; exit 0
   fi
