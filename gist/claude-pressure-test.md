@@ -1,8 +1,8 @@
-# Pressure Test
+# Pressure Test — Setup
 
 A thinking sparring partner for Claude. Strengthens ideas through genuine challenge — five structured moves: Mirror, Blind Spots, Counter-Punch, Analogy Flip, Verdict Card. **Triggers:** `/pt` or `/pressure-test` followed by your idea.
 
-**Version: 2.6** · [Full repo and examples](https://github.com/richardkdrew/claude-pressure-test)
+**Version: 2.7** · [Full repo and examples](https://github.com/richardkdrew/claude-pressure-test)
 
 ---
 
@@ -29,9 +29,11 @@ If you don't see Skills in your settings, use Option 2.
 
 1. Open the [skill file](https://gist.githubusercontent.com/richardkdrew/c062631fdfee41fac10e815973576407/raw/pressure-test-skill.md), select all, and copy
 2. Paste it at the start of any Claude conversation
-3. Type `/pt` followed by your idea
+3. Type `/pt` followed by your idea — in the same message or the next one
 
 **To update:** repeat the same steps — the links above always point to the latest version.
+
+**Privacy:** the skill is just instructions for Claude and sends nothing anywhere. Anonymise names and client details you wouldn't put in any other Claude chat.
 
 **Want to share this?** Forward this gist link to a colleague — the setup instructions above are all they need:
 <https://gist.github.com/richardkdrew/c062631fdfee41fac10e815973576407>
@@ -42,4 +44,4 @@ If you don't see Skills in your settings, use Option 2.
 /pt full We should pause feature development for a quarter to fix our architecture
 ```
 
-At `full`, Claude first checks it has understood your idea, then waits for you before challenging it. Use `/pt medium` for a quicker, single-response run.
+With no intensity, you get `medium`: one response, around 450 words. Add `light` for a gentler think-out-loud, or `full` for decisions that matter — Claude first checks it has understood your idea and waits for you before challenging it.

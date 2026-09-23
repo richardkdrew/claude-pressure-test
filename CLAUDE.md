@@ -12,6 +12,7 @@ A Claude skill that acts as a thinking sparring partner. The canonical skill is 
 | `gist/claude-pressure-test.md` | Setup guide shown first in the gist (hand-edited) |
 | `scripts/build-dist.sh` | Builds the gist's skill file and the release assets from `SKILL.md` |
 | `scripts/version.sh` | Reads the version from `SKILL.md` frontmatter (`metadata.version`) |
+| `evals/cases.json`, `scripts/run-evals.sh` | Behaviour evals — real conversations via `claude -p`, scripted checks plus a judge model. Run before any release that changes skill content |
 | `.claude/skills/release/`, `.claude/skills/fix/` | `/release` and `/fix` — the release and fix workflows |
 | `examples/` | Annotated example runs across four personas |
 | `CHANGELOG.md` | Version history |

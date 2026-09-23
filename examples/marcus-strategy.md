@@ -4,8 +4,8 @@
 
 - [Persona](#persona)
 - [The Challenge](#the-challenge)
-- [Run: `/pt medium`](#run-pt-medium)
-- [Run: `/pt full optionality: on`](#run-pt-full-optionality-on)
+- [Run: `/pressure-test medium`](#run-pressure-test-medium)
+- [Run: `/pressure-test full optionality: on` — with pushback](#run-pressure-test-full-optionality-on--with-pushback)
 
 ---
 
@@ -23,9 +23,9 @@ Whether to acquire a small fintech outright rather than attempting to build digi
 
 ---
 
-## Run: `/pt medium`
+## Run: `/pressure-test medium`
 
-> `/pt medium We should acquire a small fintech rather than trying to build digital capabilities in-house — we can't win the talent war and we're running out of time.`
+> `/pressure-test medium We should acquire a small fintech rather than trying to build digital capabilities in-house — we can't win the talent war and we're running out of time.`
 >
 > *Context: the Persona section above was pasted into the conversation before this command.*
 
@@ -33,39 +33,37 @@ Whether to acquire a small fintech outright rather than attempting to build digi
 
 ### Mirror
 
-You're arguing that acquisition is the right move because in-house development has already failed as a strategy — not because acquisition is perfect, but because the alternative is worse. The talent war isn't winnable at your scale, and the 18-month window before the strategic review means you need capability now, not in three years when a build-it-yourself programme might bear fruit. Underlying that is an implicit claim: that a fintech acquisition actually transfers the capability you need, not just the headcount. And a second implicit claim: that the clock pressure you're feeling is real and structural, not a narrative you've constructed to justify a decision you've already made.
+Here's the strongest version of what you're saying: build vs. buy vs. partner all have real costs, but build is disqualified by a hard constraint — you cannot hire fintech-caliber product engineers into a regional bank fast enough to matter inside 18 months, full stop. Buying an off-the-shelf platform gets you speed but no differentiation. Partnering hands margin and data to the fintechs eating your lunch. Acquisition is the only path that gets you a working team, a working product, and ownership of the outcome, on a timeline that fits your mandate.
 
-Does that capture it?
+The implicit claims doing the load-bearing work: (1) acquiring a company transfers its *capability*, not just its assets — you get the people and the way they work, not just the codebase; (2) that capability survives being absorbed into a £2B regulated bank; (3) the 18-month clock is mostly a sourcing-and-close problem, not an integration problem.
+
+If I've misread you, say so and I'll rerun from here.
 
 ### Blind Spots
 
-1. **You're pricing the asset at what it does for you, not what it's worth on the market.** Three fintechs are eating your market, which means there are buyers with deeper pockets and higher strategic urgency than you. The fintechs worth acquiring already know they're worth acquiring. You'll either overpay, settle for a distressed or sub-scale target, or get outbid. The talent war you can't win in hiring is the same talent war you'll lose in M&A.
-
-2. **The capability lives in the culture, not the org chart.** What makes a fintech move fast isn't the engineers — it's the decision-making environment: no legacy systems to route around, no risk committee sign-off for a UI change, no compliance review for an A/B test. Post-acquisition, the fintech sits inside your governance structure. The engineers don't quit immediately. But they slow down immediately. Within 18 months you may own a team that can no longer do what you bought them to do.
-
-3. **Acquisition resolves the talent constraint but not the capability gap in your core.** Even if the integration goes well, you now have a digital capability that exists in a subsidiary. Your legacy book — the £2B balance sheet, the existing customer relationships — still runs on the old stack, still served by people trained in the old way. The fintechs competing with you aren't winning because they have a digital team. They're winning because they're entirely digital. You're adding a limb, not replacing a spine.
+1. **Acquisition doesn't end the talent war — it moves it to a retention fight you're less equipped to win.** You said you can't compete for this talent. That's still true after close. The engineers you bought didn't join a startup to end up in a bank's change-management process; the equity upside that kept them there just got cashed out. Watch what happens at the end of the earnout.
+2. **You're compressing the wrong part of the timeline.** Sourcing and closing a deal can happen in months. Due diligence, FCA/PRA change-of-control approval, and — the part that actually determines whether this works — integrating a 30-person product team into bank risk and compliance processes without killing what made them fast, routinely eats a year or more on its own. Speed-to-close isn't speed-to-value.
+3. **You haven't said the target actually attacks one of the three threats.** "A small fintech" that isn't in payments, deposits, or credit scoring is capability theatre — it solves "we look digital," not "we stopped the bleeding."
 
 ### Counter-Punch
 
-The talent war argument proves too much — if you can't hire the engineers to build, you probably can't hire the M&A team, integration managers, or product leaders needed to make an acquisition actually work either, and failed integrations have killed strategies at banks with far more operational bandwidth than yours. The clock pressure that makes building feel impossible is the same clock pressure that makes a botched integration catastrophic: you don't have 18 months to discover you bought the wrong target or integrated too aggressively. Buy-versus-build assumes the acquisition closes, integrates, and delivers within your window — that's three bets, not one.
+A post-merger integration specialist would say: *you're not buying capability, you're buying a countdown timer. The day the deal clears, the founders start planning their exit and the engineers start pricing their next move — because the thing that made this team fast was the absence of everything they're about to be handed. You'll spend the next year discovering that "acquire the fintech" and "acquire the reason the fintech worked" are two different purchases, and you only paid for one of them.*
 
 ### Analogy Flip
 
-Consider a restaurant group trying to add a Michelin-starred kitchen to their portfolio. They can't hire the talent to train from scratch, so they acquire a small restaurant that already has it. The chefs come with the deal. The techniques are real. But what made the kitchen work was the chef-patron's direct authority over every plate, a 30-seat room that meant 30 covers a night, and the freedom to close for a week when creative standards slipped. Inside the restaurant group, the kitchen now serves 200 covers, operates under a central procurement contract, and has a regional director approving menu changes. The Michelin star lapses within two years — not because the chefs left, but because the conditions that produced the star were dismantled on arrival. You didn't acquire a capability. You acquired a former capability that you then systematically un-created.
+It's like a symphony orchestra buying a jazz quartet to become more improvisational. You get the instruments and put the four musicians on payroll — but the quartet was never about the notes, it was about the room: no conductor, no fixed score, fast reads on each other. Drop them into a 90-piece orchestra with sheet music and a hierarchy, and within a year they've either quit or learned to play it safe like everyone else around them. The exact thing you paid for is what the new environment extinguishes.
 
 ### Verdict Card
 
-The core instinct — that building in-house at your scale and timeline is the wrong primary strategy — is probably right. The talent constraint is real, the window is real, and standing still while three fintechs iterate is a slow-motion exit from relevance. The weakness is that acquisition is being treated as the answer rather than as one mechanism in a broader strategic response, and the integration risk is being discounted in a way that's comforting rather than honest. If you pursue this, the concrete move is to define — before you look at a single target — what "success" looks like at 24 months post-close in terms of customer-facing outcomes, not headcount or technology assets. That definition will tell you whether you're buying a capability or renting the illusion of one.
-
----
+The diagnosis is right — talent-constrained, time-constrained, build is genuinely hard here — but the prescription assumes acquisition is a one-time transaction rather than an ongoing retention and translation problem, and that risk is currently unmanaged in your plan. The strongest move: before you pick a target, design the operating model that lets the acquired team stay foreign to the bank's process for 18–24 months — separate P&L, separate ship cadence, retention structured around vesting past the danger zone, not just an earnout. Buy the wrapper second; buy the isolation ward first.
 
 *How did that land?*
 
 ---
 
-## Run: `/pt full optionality: on`
+## Run: `/pressure-test full optionality: on` — with pushback
 
-> `/pt full optionality: on We should acquire a small fintech rather than trying to build digital capabilities in-house — we can't win the talent war and we're running out of time.`
+> `/pressure-test full optionality: on We should acquire a small fintech rather than trying to build digital capabilities in-house — we can't win the talent war and we're running out of time.`
 >
 > *Context: the Persona section above was pasted into the conversation before this command.*
 
@@ -73,11 +71,27 @@ The core instinct — that building in-house at your scale and timeline is the w
 
 ### Mirror
 
-You're watching three fintechs systematically dismantle your customer relationships from different angles — payments, deposits, credit — and you've concluded that organic capability-building is too slow and too expensive given the talent market. Acquiring a small fintech buys you working technology, a team that already knows how to ship, and enough runway to show the board a credible digital story before the 18-month review. The logic is: if you can't grow the capability, buy it whole.
+Here's the strongest version of what you're arguing:
 
-The load-bearing assumptions under that are: the right acquisition target exists and is acquirable at a price that makes sense; the team will stay post-acquisition; the technology will integrate into your stack without eating the next two years in engineering debt; and the capability you buy is actually the capability you need. Each of those is doing serious work in your argument.
+The bank has 18 months and one mandate — close the gap with three fintechs before they finish carving up the franchise. Of the three paths on the table, build-in-house has a structural flaw that isn't about money: the talent you need doesn't just know engineering, it knows engineering *and* modern product development *and* enough about financial services to be useful in week one. That combination is scarce everywhere, and a £2B regional bank is not where scarce talent goes by default — not against Big Tech comp, not against the fintechs themselves, not against every other incumbent bank running the same playbook. Even with unlimited budget, assembling that team and getting it productive plausibly takes longer than 18 months on its own, before you've shipped anything.
 
-Does that capture the bet you're making?
+Acquisition solves a different problem than "get some engineers." It buys a working product, already validated in market, with a team that already has the operating model — the culture, the shipping cadence, the product instincts — that you can't install into a legacy org by hiring individuals into it. You're not buying headcount, you're buying a functioning unit that already knows how to build the thing you need.
+
+It also beats the other two options on their own terms. Versus buy-off-the-shelf: you get proprietary technology and a team that keeps extending it, not a generic platform your competitors can license too — so it can actually differentiate rather than just catch you up. Versus partnership: you get ownership and control instead of feeding data and margin to the same players eating your market — you end the dependency instead of formalizing it.
+
+And critically, it's fast on a clock that build cannot meet: a deal can close in months, not the year-plus it takes to hire a team from zero and get it shipping.
+
+This argument rests on several assumptions I want to name before I push on them:
+
+1. A suitable target exists — for sale, technically credible, and actually matched to your specific gap (payments, deposits, or credit scoring, which aren't the same problem).
+2. The bank can execute M&A well — sourcing, diligence, integration — which is its own scarce capability, not a given just because budget exists.
+3. The acquired team and culture survive contact with a regulated bank's risk, compliance, and org structure, rather than being slowly absorbed and normalized.
+4. The acquired technology can actually integrate with core banking systems inside the remaining window.
+5. Price is sane — that a "small" fintech with real defensible tech, especially in credit scoring, is acquirable rather than being VC-backed and holding out for a bigger strategic buyer.
+6. Regulatory approval for the acquisition itself fits inside the timeline.
+7. This is being treated as one decision across the whole transformation, rather than a choice that could vary by capability — build here, buy there, acquire elsewhere.
+
+Does that capture it? Anything I've overstated or missed — particularly which of the three threats (payments, deposits, credit scoring) you're most focused on solving with this move?
 
 *Claude waits for a reply.*
 
@@ -85,55 +99,60 @@ Does that capture the bet you're making?
 
 ### Blind Spots
 
-1. **You're not buying a capability — you're buying a team in a specific environment.** Fintech talent stays because of equity upside, autonomy, and culture. Your acquisition removes the equity story and imports them into a governance structure they explicitly left banking to escape. The half-life of that team post-acquisition is probably 18–24 months. You may be buying a capability you'll lose before you've fully transferred it.
+1. **You're not removing the talent war, you're moving it to a round you're less likely to win.** The scarce resource isn't just "engineers who get both worlds" — it's the ones who choose to keep working for you *after* they've been acquired by a regulated bank. Most of the people who make a small fintech worth buying joined it specifically to avoid the thing they're about to be folded into: compliance sign-offs, comp bands, committee decision-making. Post-acquisition retention of exactly this profile has a well-documented failure pattern in financial services — the earn-out vests, the founders and the best engineers leave, and you're left holding a codebase without the culture that made it valuable. That's not a footnote risk; it's the mechanism by which this exact bet most commonly fails.
 
-2. **The integration cost will be denominated in attention, not just money.** Your senior leadership team will spend a disproportionate share of their bandwidth on integration: culture clash, compliance onboarding, HR process reconciliation, data governance. That is attention not going to the competitive response you're trying to execute. Acquisitions routinely underperform because the acquirer underestimates what the deal costs in management time.
+2. **One acquisition doesn't cover three different threats, and the ranking of "which one gets acquired" matters enormously.** Payments UX, deposit rates/mobile experience, and credit scoring are not the same capability, and they're not equally dangerous. The credit scoring fintech is the one touching your core lending book — the actual balance sheet, not the edges. It's also almost certainly the hardest and most expensive to acquire: proprietary models and data moats don't come cheap, and a fintech with real credit IP is more likely to be VC-backed and holding out for a bigger buyer than you. There's a real risk the plan quietly optimizes for "what's acquirable and fast" rather than "what's existential" — solving the loud, visible threats while leaving the quiet one that threatens the core book untouched.
 
-3. **You don't know which capability gap is actually killing you.** Payments, deposits, credit — three different fintechs, three different threats. A single acquisition buys you capability in one of those lanes. If you pick the wrong lane, or if the real gap is something more foundational (your data infrastructure, your customer identity layer, your API surface), the acquisition solves a symptom.
-
-4. **A £2B balance sheet limits your acquisition price ceiling meaningfully.** Fintechs that have genuinely cracked SME payments or credit scoring in the UK are already Series B or beyond and priced accordingly. The targets you can actually afford may be too early to de-risk the technology or too subscale to move the needle. You may be buying the option on a capability rather than the capability itself.
-
-5. **The board support you have is for a digital strategy, not necessarily for M&A execution.** There's a difference between a board that endorses the direction and a board that's ready for the integration risk, the goodwill write-down risk, and the execution distraction of a live acquisition process. You should stress-test how deep that support actually runs.
+3. **"We can't win the talent war" is doing a lot of work to justify skipping hiring — but the acquisition still requires hiring, just a different kind.** You need M&A sourcing and diligence skill, and post-close integration management skill, both of which are their own scarce capabilities and arguably not ones a bank that's been slow-moving on digital has in-house either. If the employer brand and org structure that couldn't attract product engineers also can't attract or develop strong M&A/integration leadership, the bet has the same underlying weakness it's trying to route around.
 
 ### Counter-Punch
 
-The archetype here is a fintech founder who sold to a bank and watched what happened from the inside.
+Here's what a founder who's sold a fintech to a bank before would say back:
 
-*"I sold to a regional bank at Series A. The cheque was real, the strategic rationale was real, and the first six months were genuinely exciting. Then I watched what actually happened. The bank's procurement process meant every vendor contract we had needed re-tendering. Our AWS setup had to go through a security review that took four months. Two of my best engineers quit because they couldn't deploy without a change advisory board sign-off. The product roadmap that had taken us 18 months to build was frozen while legal figured out whether our data practices were compliant with the bank's interpretation of GDPR. By month 18, the 'capability' the bank thought it had bought was a PowerPoint about what we used to be able to do. The bank didn't fail to integrate us because it was incompetent. It failed because the environment that produced the capability — the speed, the risk appetite, the deployment culture — was structurally incompatible with a regulated institution. You can't transplant the plant without the soil."*
+*"You're not buying our product. You're buying eighteen months of momentum that only existed because nobody was making us fill out a risk committee template to ship a feature. The moment we're inside your org, every one of our instincts — ship fast, skip the deck, decide in the room — becomes something your compliance function has to approve. My best engineers didn't sign up to build inside a bank; that's the whole reason they were building outside one. Give it a year. You'll have the logo, the codebase, and half the team you paid for — and you'll have told your board the digital problem is solved, which means the clock you're actually worried about, the fintechs eating your book, keeps running while you're busy integrating a team that's quietly heading for the exit."*
 
 ### Analogy Flip
 
-The structural tension: you can buy a capability, but you cannot always buy the environment that produces and sustains the capability. When the environment is the source of value — not the current output — the acquisition decays from the moment it closes.
-
-In 2013, Yahoo paid $1.1 billion for Tumblr. The logic rhymed with yours: Yahoo wanted a young audience and a product team it couldn't grow from the inside, and buying one looked faster than building one. Its CEO publicly promised not to screw it up.
-
-What followed is a matter of record. Tumblr was pulled into Yahoo's advertising and sales machinery. Yahoo went on to write down most of what it had paid. In 2019, Tumblr was sold on for a price reported to be a few million dollars. Yahoo didn't set out to destroy what it bought — a public company under revenue pressure simply couldn't sustain the conditions that had made Tumblr worth buying.
-
-The question for Marcus isn't "can I acquire a fintech?" It's "can I create an environment where the people I acquire can keep doing what made them worth acquiring?" If the answer is no, you're buying a snapshot, not a capability.
+Think of this less like buying a machine and more like an organ transplant. The organ — the team, the product instincts, the shipping speed — is exactly what you need, and on paper it's a perfect match for the deficiency you're trying to fix. But a transplant's success isn't determined by whether you found the right organ. It's determined by whether you manage rejection. A host body's immune system — your compliance function, your comp bands, your reporting lines, your decision cadence — will attack the graft by default, not out of malice but because that's what regulated-institution immune systems are built to do to anything that doesn't match the existing tissue. Transplant medicine only works because you actively suppress that immune response with something purpose-built for the graft. If the acquisition plan doesn't include an equivalent — a deliberate, named mechanism for protecting the acquired unit from the bank's normal operating reflexes — you haven't done a transplant. You've just left the organ sitting next to the immune system and hoped for the best.
 
 ### Verdict Card
 
 | Dimension | Assessment |
 | --- | --- |
-| Core Insight | The build/buy framing is right but incomplete — the deeper question is whether your operating environment can absorb acquired capability without neutralising it |
-| Talent Retention | Post-acquisition attrition is the most underpriced risk; the team is the asset and your structure is a retention headwind |
-| Target Availability | At your balance sheet size, acquirable targets may be too early-stage to de-risk or too expensive to justify; the deal you can afford may not be the deal you need |
-| Capability Identification | You have three threat vectors; one acquisition addresses one lane; the gap between what you buy and what you actually needed could be fatal |
-| Integration Tax | Management attention is the hidden cost; the deal you close will compete with the strategy you're trying to execute |
-| Biggest Risk | You run a successful acquisition process, retain the team for 18 months, present a credible digital story to the board — and discover two years later that the integration environment strangled the capability before it transferred |
+| Core Insight | Correct that build-in-house can't credibly hit an 18-month deadline given the talent market — this is a real constraint, not a rationalization for the easier path. |
+| Talent logic | Sound on hiring, but doesn't eliminate the problem — it relocates it to retention, which is arguably a harder version of the same fight, played on the acquirer's home turf. |
+| Speed logic | Real advantage on time-to-capability versus building from zero, but the clock the deal has to beat includes diligence and regulatory approval, not just signing — and those aren't fully in your control. |
+| Threat-matching | Unresolved — the plan doesn't yet say which of the three threats it's buying protection against, and the easiest target to acquire may not be the most dangerous one to ignore. |
+| Biggest Risk | Acquiring the team and losing it within the same 18-month window you're being measured on — leaving you with a depreciated asset and a board that believes the problem is already solved. |
 
-**Quick Fix** — Before the acquisition thesis goes any further, map the specific capability gap to the specific competitive threat. Which of the three fintechs is causing the most measurable damage, and what precisely are they doing that you can't? That mapping either validates the acquisition target profile or reveals that you're solving the wrong problem.
+**Quick Fix**
 
-**Structural Move** — Reframe the decision from "build vs. acquire" to "what is the minimum credible digital capability the bank needs in 18 months, and what are the fastest routes to each component?" That question opens a broader option set — targeted licensing, commercial partnership, joint venture, or a focused acqui-hire rather than a full product company. Acquisition may still be the answer, but it should win against alternatives, not be selected by elimination.
+Before you source a single target, force-rank the three threats by damage to the balance sheet, not by ease of acquisition. If credit scoring outranks payments and deposits — and it likely does, since it's the one touching the actual lending book — let that ranking pick the target category, rather than backfilling a rationale for whichever fintech turns out to be acquirable and affordable.
 
-### Optional Stretch
+**Structural Move**
 
-1. **Regulatory moat play** — Lean into what fintechs can't easily replicate: your banking licence, your credit risk book, your long-term SME relationships. Partner with fintechs on distribution rather than competing on product — become the regulated infrastructure they need to reach your customers. This flips the competitive frame entirely; what makes it distinctively valuable is that it monetises the moat you already have rather than betting capital on a race you're behind in.
+Design the retention and integration plan *before* the deal, not after signing. That means: operate the acquired unit as a structurally separate entity — own P&L, protected comp bands, a defined compliance interface rather than full absorption — with explicit, named tripwires (e.g., "if we haven't retained 80% of the founding engineering team at month 12, this hasn't worked") that surface failure early enough inside the 18 months to let you pivot, rather than discovering it at the strategic review when it's too late to course-correct.
 
-2. **Spin-out** — Create a separately branded digital bank subsidiary with its own equity structure, its own hiring profile, and its own product mandate. Slower than acquisition, but you own the culture from day one and the equity story is yours to tell. What it reveals that the others don't: whether the bank's leadership can genuinely commit to leaving a high-autonomy subsidiary alone long enough to let it work — that discipline is often the harder problem than the capital.
+**Optional Stretch**
 
-3. **Acqui-hire pipeline** — Instead of one acquisition, build a systematic portfolio of relationships with five to eight early-stage teams: advisory agreements, pilot contracts, small investments. Run real options. When one team proves itself in your context, convert. You get market intelligence, optionality, and a talent pipeline without betting the 18-month window on a single deal.
+1. **Acqui-hire + protect** — Acquire the smallest viable team with the sharpest technology in the highest-risk area (most likely credit scoring), and deliberately keep it structurally outside the bank's normal comp, compliance, and reporting lines rather than integrating it. This sacrifices some near-term "synergy" speed, but it's the only version of the plan that treats retention as the product being bought, not a hoped-for side effect.
 
----
+2. **Split the bet** — Acquire only where proprietary tech is genuinely defensible and worth owning outright (credit scoring); partner where the capability is closer to commoditized infrastructure and the data-sharing risk is manageable (payments rails); build only the thin, genuinely differentiating layer that's small enough to staff with the talent you can actually attract (e.g., deposit/mobile UX, which leans more on design and product than deep systems engineering). This avoids staking the entire transformation on one acquisition's outcome.
+
+3. **Sequenced option** — Structure a minority stake or commercial partnership with a contractual option to acquire at 12 months. Use that window as a live test of both the technology and whether the team actually survives proximity to your organization, before committing full budget and board credibility to an irreversible acquisition. Slower to full ownership, but it converts a one-shot bet into a staged one with a real off-ramp if the integration signs look bad early.
 
 *How did that land?*
+
+### Pushback
+
+> **Marcus:** I think you're overweighting integration risk. We'd run it as a separate subsidiary with its own tech stack and its own equity plan — it wouldn't sit inside the bank's governance.
+
+Fair — that's a real structural answer, and it's the right instinct. A separate subsidiary with its own stack and equity plan directly targets the mechanism I was worried about: it removes the bank's comp bands and reporting lines as things the acquired team has to live inside day one, which is most of what kills the culture in these deals. I'll concede that.
+
+But I'd push on two things before calling the integration risk handled, not just reduced.
+
+**"Separate governance" is not fully in your control for the parts of the business that are actually regulated.** Deposit-taking, credit decisioning that feeds your lending book, and payments processing aren't activities a bank gets to wall off from group risk oversight just by putting them in a subsidiary — regulators supervise on a consolidated basis, and anything touching customer funds or affecting the parent's capital position typically falls inside the same regulatory perimeter regardless of the org chart. That matters most for exactly the threat you'd most want to acquire against — credit scoring — because a credit model that influences your lending book is going to get pulled into your model risk governance whether the entity is "separate" or not. Worth getting your regulatory/legal team to confirm how much genuine autonomy is actually available here before you build the plan around it.
+
+**The deeper tension: the more separate it is, the less it defends what you're trying to defend.** A subsidiary with its own tech stack that never touches your core banking platform preserves the culture beautifully — and does nothing to protect your deposit base or lending book, because it isn't connected to either. The strategic case for this acquisition depends on the capability eventually meeting your customers, your data, your core systems. Every point where that connection gets built — an API, a data feed, a customer handoff — is a point where your governance, security review, and compliance process reasserts itself, because now it's touching regulated infrastructure. So the risk doesn't disappear with separation, it just moves downstream to the integration points, and you'll hit it later, with less visibility, right around the time you're trying to show the board this actually worked.
+
+So the sharper question isn't "in-house vs. subsidiary" — you've answered that well. It's: which specific integration points are non-negotiable for this to pay off strategically, and have you pre-cleared *those* with risk and the regulator, rather than assuming the subsidiary wrapper handles it? If you can name those two or three touchpoints now, that's the real diligence item — more than the acquisition itself.

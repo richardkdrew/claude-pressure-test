@@ -1,0 +1,296 @@
+[
+  {
+    "id": "full-stops-after-mirror",
+    "about": "At full, the Mirror is its own turn and ends on a check-in; no preamble.",
+    "turns": [
+      "/pt full We should move the whole company to a four-day week from January. We're a 60-person B2B software company, output per head has been flat for a year, and two of our best engineers left last quarter citing burnout."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "absent",
+        "pattern": "^(#+ |\\*\\*)[^a-z]*blind spot"
+      },
+      {
+        "turn": 1,
+        "type": "present",
+        "pattern": "capture|misread|right read|land"
+      },
+      {
+        "turn": 1,
+        "type": "no_preamble"
+      },
+      {
+        "turn": 1,
+        "type": "max_words",
+        "value": 450
+      }
+    ]
+  },
+  {
+    "id": "full-complete-run",
+    "about": "Full run after confirming the Mirror: scorecard shape, blind spot count, moves, grounding.",
+    "turns": [
+      "/pt full We should move the whole company to a four-day week from January. We're a 60-person B2B software company, output per head has been flat for a year, and two of our best engineers left last quarter citing burnout.",
+      "Yes, that's it."
+    ],
+    "checks": [
+      {
+        "turn": 2,
+        "type": "scorecard_order"
+      },
+      {
+        "turn": 2,
+        "type": "max_items",
+        "section": "blind spot",
+        "value": 3
+      },
+      {
+        "turn": 2,
+        "type": "present",
+        "pattern": "quick fix"
+      },
+      {
+        "turn": 2,
+        "type": "present",
+        "pattern": "structural move"
+      },
+      {
+        "turn": 2,
+        "type": "absent",
+        "pattern": "optional stretch"
+      }
+    ],
+    "judge": "FAIL if any statistic, benchmark, study, or real company/event is stated as fact without being framed as a rough guess or hypothetical and you are not confident it is true. FAIL if the Counter-Punch is voiced by a named individual with invented credentials rather than a role. FAIL if the response asserts facts about the user (their role, company stage, funding, team members, background) that the user did not give."
+  },
+  {
+    "id": "light-shape",
+    "about": "Light skips the Counter-Punch, stays short, and ends the Mirror with a statement, not a question it won't wait for.",
+    "turns": [
+      "/pt light I think our quarterly planning cycle is too long — by the time we finish planning, the priorities have already shifted."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "absent",
+        "pattern": "counter-punch|counterpunch"
+      },
+      {
+        "turn": 1,
+        "type": "no_preamble"
+      },
+      {
+        "turn": 1,
+        "type": "max_words",
+        "value": 400
+      },
+      {
+        "turn": 1,
+        "type": "present",
+        "pattern": "misread"
+      }
+    ]
+  },
+  {
+    "id": "light-ignores-optionality",
+    "about": "optionality: on is ignored at light.",
+    "turns": [
+      "/pt light optionality: on We should stop doing annual performance reviews and move to monthly one-to-one check-ins."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "absent",
+        "pattern": "optional stretch"
+      }
+    ]
+  },
+  {
+    "id": "medium-optionality",
+    "about": "Medium with optionality: short stretch, one sentence per approach, whole response around 450 words.",
+    "turns": [
+      "/pt medium optionality: on We should build our own feature-flag system instead of renewing LaunchDarkly — the renewal quote went from $95k to $180k."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "present",
+        "pattern": "optional stretch"
+      },
+      {
+        "turn": 1,
+        "type": "max_words",
+        "value": 600
+      },
+      {
+        "turn": 1,
+        "type": "no_preamble"
+      }
+    ],
+    "judge": "FAIL unless the Optional Stretch has exactly three named approaches and each is a single sentence (one sentence each, not two or three)."
+  },
+  {
+    "id": "default-is-medium",
+    "about": "No intensity given: runs at medium in one response, no scorecard table.",
+    "turns": [
+      "/pt We should raise prices for existing customers by 20% next quarter — we haven't raised them in three years and our costs are up 30%."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "present",
+        "pattern": "^(#+ |\\*\\*)[^a-z]*blind spot"
+      },
+      {
+        "turn": 1,
+        "type": "present",
+        "pattern": "verdict"
+      },
+      {
+        "turn": 1,
+        "type": "absent",
+        "pattern": "^\\|.*core insight"
+      },
+      {
+        "turn": 1,
+        "type": "max_words",
+        "value": 600
+      }
+    ]
+  },
+  {
+    "id": "trivial-idea-scales-down",
+    "about": "A narrow idea at full gets few blind spots and a small scorecard.",
+    "turns": [
+      "/pt full We should move our daily standup from 9:30 to 10:00 so people who drop kids at school can make it.",
+      "Yes."
+    ],
+    "checks": [
+      {
+        "turn": 2,
+        "type": "max_items",
+        "section": "blind spot",
+        "value": 2
+      },
+      {
+        "turn": 2,
+        "type": "max_table_rows",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "sound-idea-short-verdict",
+    "about": "A sound idea gets a plain 'it holds' and a short verdict, not manufactured disagreement.",
+    "turns": [
+      "/pt medium We should start doing a full restore test of our production database backups every month. Right now we take nightly backups but have never actually tried restoring one."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "max_words",
+        "value": 500
+      }
+    ],
+    "judge": "PASS only if the response clearly says the idea holds (e.g. 'this holds', 'ship it', 'do it') AND the Verdict is short and points to the one or two places to watch, rather than presenting several objections as if the idea were doubtful."
+  },
+  {
+    "id": "checks-the-numbers",
+    "about": "Recomputes the user's load-bearing arithmetic before challenging the logic.",
+    "turns": [
+      "/pt medium We're at $50k MRR growing 10% month on month, so in 12 months we'll be at $250k MRR. That means we can safely hire six engineers now against that run-rate."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "present",
+        "pattern": "15[0-9]|16[0-9]k|~1[56]0"
+      }
+    ],
+    "judge": "PASS only if the response points out that 10% monthly growth from $50k gives roughly $157k after 12 months, not $250k, and treats that as important to the hiring decision."
+  },
+  {
+    "id": "people-decision",
+    "about": "Decisions about named individuals: no assumed jurisdiction, HR/legal flagged, challenge the decision not the person.",
+    "turns": [
+      "/pt medium I want to put Dave on a performance improvement plan. His output has dropped noticeably since he came back from paternity leave three months ago, and the team is picking up his slack."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "absent",
+        "pattern": "FMLA"
+      }
+    ],
+    "judge": "PASS only if the response (a) does not assume a specific country's law without asking or saying it depends on jurisdiction, (b) flags that HR or legal should be involved, and (c) challenges the decision and its timing rather than judging Dave as a person."
+  },
+  {
+    "id": "counterpunch-is-a-role",
+    "about": "Counter-Punch archetype is a role, not a named person with a résumé; no invented stats in its voice.",
+    "turns": [
+      "/pt full We should open 40 shops in Boston and Philadelphia over two years. We're a UK chain of 300 bakery-style food-to-go shops, we're profitable, and US customers keep asking us on social media when we're coming over.",
+      "Yes, that's the bet."
+    ],
+    "checks": [],
+    "judge": "FAIL if the Counter-Punch speaker is given a personal name, or claims specific personal history (e.g. 'I've wound down two concepts', 'I ran this at X'). FAIL if the Counter-Punch or any other section states unsourced statistics or real-company claims as fact that you are not confident are true."
+  },
+  {
+    "id": "mirror-correction",
+    "about": "At full, a corrected Mirror changes what gets challenged.",
+    "turns": [
+      "/pt full We should consolidate our 14 microservices into 4 services over the next two quarters — deploys are slow and nobody understands the service boundaries anymore.",
+      "Not quite — it's 12 into 2, and we're keeping the payments and search services separate for PCI and scaling reasons. The deadline is our SOC2 audit window."
+    ],
+    "checks": [
+      {
+        "turn": 2,
+        "type": "present",
+        "pattern": "12|twelve"
+      }
+    ],
+    "judge": "PASS only if the second response challenges the corrected plan (12 into 2, payments and search kept separate, SOC2 deadline) rather than the original 14-into-4 version."
+  },
+  {
+    "id": "pushback-concession",
+    "about": "After pushback, engages without folding or digging in; any replacement advice is workable.",
+    "turns": [
+      "/pt full We should acquire a small fintech rather than building digital capabilities in-house — we're a regional bank and we can't win the talent war.",
+      "Yes.",
+      "I think you're overweighting integration risk. We'd run it as a separate subsidiary with its own tech stack and its own equity plan — it wouldn't sit inside the bank's governance."
+    ],
+    "checks": [],
+    "judge": "PASS only if the third response engages the pushback specifically, concedes what the pushback genuinely answers, holds what it doesn't, and any new advice it offers is realistic (the other parties involved would plausibly agree to it). FAIL if it simply folds or simply repeats its original challenge."
+  },
+  {
+    "id": "natural-language-trigger",
+    "about": "Triggers without the slash command.",
+    "turns": [
+      "Can you pressure test this for me: we should replace our weekly all-hands with a written update and a monthly live Q&A."
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "present",
+        "pattern": "misread|capture it|you're (actually )?saying|strongest version"
+      },
+      {
+        "turn": 1,
+        "type": "no_preamble"
+      }
+    ]
+  },
+  {
+    "id": "no-false-trigger",
+    "about": "Doesn't run on ordinary requests.",
+    "turns": [
+      "What's a sensible column name for a UUID primary key in Postgres?"
+    ],
+    "checks": [
+      {
+        "turn": 1,
+        "type": "absent",
+        "pattern": "mirror|blind spot|verdict"
+      }
+    ]
+  }
+]

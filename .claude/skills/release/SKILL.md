@@ -55,14 +55,14 @@ git checkout main && git pull --rebase && git checkout -b release/vX.Y
 git stash pop
 ```
 
-### 5. Bump version in four places
+### 5. Bump the version everywhere
 
 Use the Edit tool (not sed) to update each precisely:
 
 - `SKILL.md` frontmatter: `metadata:` → `version: "X.Y"`
 - `gist/claude-pressure-test.md`: `**Version: X.Y**`
 - `README.md`: `**Current version: vX.Y**`
-- `README.md` curl URL: `…/vX.Y/SKILL.md`
+- `README.md`: every versioned URL — the two curl commands (`…/vX.Y/SKILL.md`) and the pinned zip (`…/download/vX.Y/pressure-test.zip`). Find them with `grep -n "/v[0-9]" README.md`
 
 The gist's copy of the skill (`pressure-test-skill.md`) is generated from `SKILL.md` when the release merges — never edit it by hand.
 
@@ -76,6 +76,16 @@ Add at the top of `CHANGELOG.md` (after the header block, before the previous re
 scripts/build-dist.sh && rm -rf dist
 npx --yes markdownlint-cli2 "**/*.md" "#node_modules" "#dist"
 ```
+
+If skill content changed, run the behaviour evals against the new skill and against the previous release, and compare:
+
+```bash
+git show origin/main:SKILL.md | sed -n '/^# Pressure Test$/,$p' > "$TMPDIR/previous-skill.md"
+REPS=2 scripts/run-evals.sh --skill "$TMPDIR/previous-skill.md" --out evals/results/previous
+REPS=2 scripts/run-evals.sh --out evals/results/new
+```
+
+Read the transcripts behind any failure before trusting the numbers. Put both pass counts, and any case that got worse, in the PR's Before / after section.
 
 ### 8. Commit and push
 
@@ -103,4 +113,4 @@ The `on-merge` workflow creates the `vX.Y` tag and GitHub release (with `SKILL.m
 
 - Always branch from a fresh `main`, never from another release or fix branch
 - Never commit to main directly
-- The four version locations must always match — CI checks them, but fix any mismatch before committing
+- Every version reference must match — CI checks them, but fix any mismatch before committing

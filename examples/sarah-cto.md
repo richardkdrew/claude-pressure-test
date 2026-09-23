@@ -4,8 +4,9 @@
 
 - [Persona](#persona)
 - [The Challenge](#the-challenge)
-- [Run: `/pt light`](#run-pt-light)
-- [Run: `/pt full`](#run-pt-full)
+- [Run: `/pressure-test light`](#run-pressure-test-light)
+- [Run: `/pressure-test full` — correcting the Mirror](#run-pressure-test-full--correcting-the-mirror)
+- [Run: `/pressure-test` — a sound idea at the default intensity](#run-pressure-test--a-sound-idea-at-the-default-intensity)
 
 ---
 
@@ -21,40 +22,32 @@ Whether to pause feature development for a quarter to modularise the platform �
 
 ---
 
-## Run: `/pt light`
+## Run: `/pressure-test light`
 
-> `/pt light We should pause feature development for a quarter and modularise the platform — if we don't, the next year of growth will break us.`
+> `/pressure-test light We should pause feature development for a quarter and modularise the platform — if we don't, the next year of growth will break us.`
 >
 > *Context: the Persona section above was pasted into the conversation before this command.*
 
 ---
 
-### Mirror
-
-You're saying the debt isn't just slowing you down — it's structural, and the window to address it on your terms is closing. Forty-minute deploys and two people holding the keys to the core aren't inconveniences; they're compounding risks that get harder to unwind as the team and codebase grow. A quarter of deliberate pain now buys you the foundation the $50M plan actually requires. Does that capture it?
+**Mirror:** The monolith isn't just a tech debt problem, it's an organizational one — 35 engineers can't move independently inside one codebase, 40-minute deploys throttle everyone's iteration speed, and two people holding the core in their heads is a continuity risk the board would care about if they understood it. Modularizing now, before the $50M push scales the pain further, is a bet that a deliberate quarter-long pause is cheaper than compounding chaos. If I've misread you, say so and I'll rerun from here.
 
 ### Blind Spots
 
-- Who owns the roadmap during the pause? If the answer is "nobody," a quarter of silence from engineering creates a sales and leadership vacuum that may be harder to recover from than the technical debt itself.
-- "Modularise the platform" can mean very different things to 35 engineers. Without a tight definition of done, the quarter ends and you're somewhere in the middle — slower, messier, and no cleaner than when you started.
+- Can all 35 engineers actually be usefully deployed on modularization, or does the real bottleneck work concentrate on those same 2 senior engineers — meaning a full-team freeze halts revenue output without proportionally speeding up the fix?
+- Does it have to be binary? Would a strangler-fig approach (extract one module at a time while shipping reduced-but-nonzero features) get most of the risk reduction without the harder sell of "zero features for a quarter" to a board that just funded a growth plan?
 
-### Analogy Flip
+**Analogy flip:** It's a bit like grounding your whole fleet for a quarter to overhaul the engines — when the actual problem is that only two mechanics understand how the engines work. You might get more value pulling planes out of rotation one at a time than stopping the airline.
 
-A city that keeps issuing building permits on top of an aging water main because digging up the street will cause traffic disruption. Every month of permits is another stakeholder who'll be angry when work finally starts — and eventually the main fails on its own schedule, during peak hours, with no preparation time. The disruption you're avoiding now becomes the crisis you're managing later, on worse terms.
-
-### Verdict Card
-
-The underlying logic is sound: bounded pain now versus unbounded pain later is usually the right trade, and your signals — deploys, bus risk, team stepping on each other — suggest you're closer to the unbounded scenario than the business realises. The thing to sharpen: a "pause" framed to the board as a quarter of nothing will face constant pressure to end early. It needs a shipping narrative — what gets demonstrably better, and when.
-
----
+**Verdict:** The diagnosis is sound — bus factor and deploy time are real, worsening risks. The weak point is the "full stop, all hands" framing — check whether the bottleneck is engineer-hours or tribal-knowledge-hours before freezing 35 people's output on it.
 
 *How did that land?*
 
 ---
 
-## Run: `/pt full`
+## Run: `/pressure-test full` — correcting the Mirror
 
-> `/pt full We should pause feature development for a quarter and modularise the platform — if we don't, the next year of growth will break us.`
+> `/pressure-test full We should pause feature development for a quarter and modularise the platform — if we don't, the next year of growth will break us.`
 >
 > *Context: the Persona section above was pasted into the conversation before this command.*
 
@@ -62,53 +55,93 @@ The underlying logic is sound: bounded pain now versus unbounded pain later is u
 
 ### Mirror
 
-You're making a structural argument, not just a technical one. The monolith isn't a performance problem — it's an organisational constraint. Thirty-five engineers operating on a shared codebase where two people hold the mental model means your actual delivery capacity is capped well below what the headcount implies. Every new feature gets slower to ship, not faster, because the coupling tax compounds. The 40-minute deploy is a symptom; the cause is that the system was designed for a team of eight making fast, co-ordinated decisions, and that team no longer exists.
+Here's the strongest version of what you're proposing: the monolith isn't just annoying anymore, it's become a load-bearing constraint on the business — 40-minute deploys are a tax on every team, cross-team collisions are eating velocity that should be *increasing* as headcount grows, and two people carry enough tribal knowledge that losing either one is an existential engineering event, not a staffing hiccup. Your read is that this isn't a "nice to have someday" problem — it's a problem with a growth curve of its own, and the growth curve for pain is steeper than the growth curve for revenue. If the board's plan is 5x ARR in three years, and the org roughly doubles again to support that, the current architecture doesn't degrade linearly — it seizes. So you'd rather take a deliberate, bounded hit now (one quarter, zero new features, full team on modularization) than an unplanned, unbounded hit later (an outage during a launch, a senior engineer leaving mid-crisis, a quarter of *negative* velocity because nothing can ship safely).
 
-The load-bearing assumption underneath your proposal: the cost of a controlled pause now — one quarter, scoped, on your terms — is less than the cost of an uncontrolled crisis later, when failure happens during a critical sales cycle or after you've hired another twenty engineers into the same broken system. You're not asking for permission to go slow. You're arguing that going slow now is the only way to go fast on the timeline the board actually cares about.
+The case for a hard stop specifically — rather than a slower parallel effort — rests on a few things you probably believe even if you didn't say them outright:
 
-Does that capture it?
+- Modularization done alongside full feature velocity gets starved of attention and never actually finishes — "20% time" architecture work is where good intentions go to die.
+- Three months is a large enough block of focused work to get through the highest-value seams (the ones causing the deploy bottleneck and the team collisions), even if the whole platform isn't "done."
+- The two senior engineers are more useful *directing* a concentrated effort than being interrupted piecemeal by 33 other engineers shipping features around them.
+- A short, sharp, well-communicated pause is less damaging to the business than the credibility hit of missing commitments later because the platform couldn't support the team trying to hit them.
+- The board, having just approved a growth plan, would rather hear "we're derisking the engine now" than discover the engine can't handle the load a year from now.
+
+Does that capture it — particularly the bet that a full stop beats a parallel-track effort, and that three months is the right unit of time for this? If I've misread you, say so and I'll rerun from here.
 
 *Claude waits for a reply.*
 
-> **Sarah:** Yes — that's the argument.
+> **Sarah:** Close, but not the whole platform — I mean the billing and permissions core. That's where every team collides and where the two senior engineers are the only ones who can make changes. The rest of the monolith can wait.
+
+Good — that's a materially different, sharper idea. Locking that in: pause feature work for a quarter to let the two senior engineers (plus whoever else is needed) decouple billing and permissions from the monolith, because that's the specific seam where every team collides and where only two people can safely touch the code. Let's run the rest of the round against *that* version.
 
 ### Blind Spots
 
-1. **The pause will not stay paused.** A quarter with no features shipping creates a power vacuum. Sales will escalate. The CEO will get pulled into customer calls. By week six, someone senior will approve "just one critical fix" and the modularisation work will fracture into a half-done hybrid that's worse than the monolith. The plan needs an explicit decision-making protocol for exceptions — not an assumption they won't happen.
+1. **The fix is narrow; the pause as stated isn't.** If the actual problem is contained to billing and permissions, why does "pause feature development" apply to all 35 engineers? Either most feature work in this product genuinely routes through billing/permissions (plan tiers, entitlements, usage metering, role-based access — plausible in B2B SaaS), in which case the freeze is more justified than it sounds but you should say *that* explicitly, not "we're pausing to fix architecture." Or it doesn't, in which case you're benching 25+ people who have nothing to do with the bottleneck, and the real ask is a scoped freeze on a subset of teams plus focused headcount on the seam — a much smaller, easier sell to the board than "the whole eng org stops."
 
-2. **"Modularise" is not a definition of done.** Thirty-five engineers will have thirty-five mental models of what that means. Without a precise target state — specific seams, specific contracts, specific metrics — the quarter ends mid-migration. You trade a stable monolith for an unstable in-between state, and the next quarter of features ships on top of that.
+2. **You're concentrating the bus-factor risk right before betting on it.** The two engineers who are single points of failure for billing/permissions are also the only ones who can lead the work to fix that. For a quarter, your two highest-risk people become *more* critical, not less — they're now the bottleneck for the modularization itself, still fielding whatever billing/permissions fires happen to come up, and if either one leaves, gets sick, or burns out in month two, you don't have a working freeze *or* a working migration — you have a half-decomposed billing system and no one left who understands either the old or the new version well enough to finish it.
 
-3. **The two senior engineers who hold the mental model are your critical path.** Modularisation work requires that knowledge to be externalised first — documentation, pairing, recorded sessions. If you start cutting seams before the knowledge is safe, you increase the bus risk during the most vulnerable period.
-
-4. **The board approved a growth plan, not a pause.** They're measuring you on the $50M trajectory. A quarter of no visible output will feel like a broken promise unless you have a concrete story about what "faster" looks like in Q2 and what "breaking" would have looked like if you hadn't done this. You need the before/after case ready before you're asked for it.
+3. **This is the worst place in the codebase to be wrong under time pressure.** Billing errors are revenue recognition and customer-trust problems; permissions errors are access-control problems — in B2B SaaS, a permissions regression means one customer's data leaking into another customer's view, which is a security-incident and possibly a contract- and compliance-ending event. A fixed 90-day clock is a schedule pressure, and schedule pressure on the two subsystems with zero tolerance for "mostly correct" is a specific, dangerous combination — the same pressure that produces exactly the kind of bug you're trying to prevent.
 
 ### Counter-Punch
 
-Here's what the VP of Sales who just closed your two largest enterprise deals would say back:
+Here's what an enterprise customer's security lead — the person who signed off on your SOC 2 report before renewing — would say if they knew what you were planning:
 
-*"I hear the architecture argument, and maybe it's right. But you're asking me to go dark on our top prospects for ninety days while our main competitor ships every two weeks. We just hit $10M — this is exactly when customers are watching to see if we're real. Every quarter we don't ship is a quarter we tell the market we're in maintenance mode. We lose two of those enterprise deals and the board isn't talking about $50M anymore. Technical debt is a real problem. Losing the growth moment is a different kind of structural failure — and it doesn't come with a roadmap out."*
+*"You want to rewrite the system that decides who can see whose data, over one quarter, using the same two engineers who are apparently already the only people who understand it well enough to touch it safely today? That's not derisking, that's a single 90-day change window on the one system where I have zero appetite for surprises. What's the rollback if week eleven you're not done — do you ship a half-migrated permissions model into prod because the calendar ran out? I don't care that it's scoped. I care that 'scoped and rushed' is exactly how access-control bugs happen."*
 
 ### Analogy Flip
 
-Picture a mining company that discovers early survey data suggesting a primary shaft has a slow fracture developing — manageable now with a two-week closure and controlled reinforcement, but likely catastrophic in six to eighteen months if left. Management delays the closure because the shaft is currently at peak output and a two-week shutdown costs $4M. Eighteen months later the fracture propagates during maximum load. The shaft is condemned, the closure is now six months instead of two weeks, and the total cost is twelve times the original estimate — plus an inquiry, plus the reputational hit with insurers. The fracture didn't wait for a convenient moment. It just got bigger until it picked its own.
-
-The structure is identical to yours: a bounded, painful intervention now versus an unbounded, uncontrolled failure later. The mining scenario adds one element worth sitting with — the people who delayed the closure had strong incentives and seemingly good reasons. So do your board and your VP of Sales. That doesn't make them wrong to push back. It means the argument you need to win isn't technical. It's about who controls the timing.
+Picture a bank that decides its vault's locking mechanism and its ledger are both showing strain as branch volume grows — reasonable, those are the two systems where every teller collides. So it assigns the job to the two original locksmiths (the only ones who understand the current mechanism), gives them 90 days, and keeps the vault open for business the whole time. Nobody runs a bank this way. Core banking and access-control migrations run the *new* system in parallel with the old one — shadow mode, dual-write, reconciliation — for as long as it takes the two systems to agree on every transaction, because the exit criterion is "we've proven it's correct," not "the quarter is over." The calendar isn't the thing that should tell you you're done; agreement between old and new, verified in production traffic, is. A timebox on this specific pair of systems isn't discipline, it's picking the wrong instrument for the risk you're trying to manage.
 
 ### Verdict Card
 
 | Dimension | Assessment |
 | --- | --- |
-| Core Insight | The system was designed for a team of 8; you're running 35 through it. The mismatch is the problem, and it compounds with every hire. |
-| Logic of the Trade | Bounded pain now vs. unbounded failure later is the right frame. Your signals — deploys, bus risk, cross-team collisions — suggest later is closer than it looks. |
-| Organisational Risk | The pause will face constant pressure to end early. Without a decision protocol for exceptions, it fractures into a half-done migration that's harder to complete than the original monolith. |
-| Knowledge Risk | The two engineers who hold the core are your critical path. Externalising that knowledge isn't a nice-to-have before modularisation — it's a prerequisite. |
-| Stakeholder Risk | The board approved growth, not a pause. You need a concrete before/after narrative and a Q2 velocity story ready before you're challenged, not after. |
-| Biggest Risk | "Modularise the platform" without a precise definition of done. The quarter ends mid-migration and you ship the next year's features on top of an unstable in-between state. |
+| **Core Insight** | Right instinct to scope this to billing/permissions specifically — that's a real, well-identified seam, not a vague "the monolith is bad" complaint. |
+| **Scope Discipline** | Good in principle, undermined if "pause feature development" still means all 35 engineers rather than the teams actually touching this seam. |
+| **Resourcing Mismatch** | A narrow technical target justifies a narrow freeze, not an org-wide one — unless you can show most roadmap work genuinely depends on this code. |
+| **Bus-Factor Paradox** | The plan asks your two highest-risk people to carry the riskiest 90 days of their tenure, with no stated fallback if either becomes unavailable mid-migration. |
+| **Exit Criteria** | "One quarter" is a calendar commitment on a correctness problem — the two don't naturally align, especially on billing and access control. |
+| **Biggest Risk** | Not that the quarter runs long — it's that it runs *out* before verification is done, and the choice becomes ship an unverified permissions/billing model or extend indefinitely, either of which costs more than the original problem. |
 
-**Quick Fix** — Define done before you start. Pick three specific seams, three measurable outcomes (deploy time, independent release capability, on-call load), and a weekly check-in format that makes progress visible to non-engineers. The pause needs a shipping narrative even if it's not shipping features.
+**Quick Fix**
+Rewrite the ask before it goes to the board or the team: name the specific teams whose feature work actually touches billing/permissions and freeze only those, explicitly. Everyone else keeps shipping. This alone kills most of the credibility risk of "CTO paused the roadmap" without changing the technical plan at all.
 
-**Structural Move** — Reframe the proposal to the board as a capacity investment with a concrete payoff date, not a pause. "In Q3 we ship features at half velocity while we restructure. In Q4, each of our five product teams deploys independently. Here's what that unlocks for the $50M plan." That's a different conversation than asking permission to stop.
+**Structural Move**
+Replace the calendar-based exit condition with a verification-based one, and make bus-factor reduction a required deliverable, not a side effect. Concretely: stand up the new modular billing/permissions path in shadow mode against the monolith for all production traffic, and don't call the migration done until outputs match on a defined threshold (e.g., 100% agreement over N consecutive days across all customers, or a defined tolerance with reconciliation) — *and* until at least one additional engineer per subsystem can independently make and ship a change without either of the two seniors in the loop. If either exit condition isn't met at the 90-day mark, that's the signal to extend or change approach — not the calendar running out.
+
+*How did that land?*
 
 ---
+
+## Run: `/pressure-test` — a sound idea at the default intensity
+
+> `/pressure-test We should start running a full restore test of our production database backups every month. We take nightly backups but we've never actually restored one.`
+>
+> *Context: the Persona section above was pasted into the conversation before this command.*
+
+---
+
+### Mirror
+
+You're saying: an untested backup isn't a backup, it's a hope. Right now you're one bad migration, one silent replication bug, or one ransomware event away from discovering — at the worst possible moment — that your recovery path doesn't actually work. A monthly restore test converts that assumption into a verified capability, and relative to the size of the risk it's protecting against (total data loss, at a company the board just funded to 5x), it's cheap.
+
+Baked into that are a few claims: that monthly is the right cadence to catch backup drift before it matters, that a "full" restore is the right fidelity of test, and that the team has the bandwidth to absorb this now. If I've misread any of that, say so and I'll rerun from here.
+
+### Blind Spots
+
+1. **Who actually runs it?** If the restore procedure lives in the heads of your two senior engineers, a monthly drill doesn't reduce your bus risk — it adds a recurring obligation to your two highest-risk people. You could run this test every month for a year and still lose everything the day one of them leaves.
+2. **Opportunity cost, right now.** Senior engineering time is your binding constraint this quarter — it's the thing standing between you and fixing 40-minute deploys and teams stepping on each other. A manual monthly ritual competes directly with that, and "manual monthly ritual" is exactly the kind of task that gets quietly skipped the first time a deadline bites.
+3. **"Full" and "monthly" are undefined.** Vague scope is how good intentions become theater — the test either balloons into a costly production-scale exercise nobody has time for, or gets scoped down over time until it's checking something trivial.
+
+### Counter-Punch
+
+An SRE who's done this at scale before would say: *"A monthly restore test run by hand is a fire drill, not infrastructure. What breaks companies isn't the absence of a drill — it's that the drill depends on two people's tribal knowledge and a calendar reminder. Script the restore, checksum the result, cron it weekly against a scratch instance, and page someone if it fails. That's not a monthly ceremony you might skip — it's a fact about your system that's true every day."*
+
+### Analogy Flip
+
+This is a fire drill where the only two people certified to use the extinguisher are the ones leading it. Everyone else in the building still doesn't know where it is or how it works. The point of a drill isn't just "does the extinguisher work" — it's "does someone other than the two most at-risk people know how to use it."
+
+### Verdict Card
+
+The instinct is correct and overdue — untested backups at this stage of company is genuine tail risk, not paranoia. The weakness is mechanism: as scoped, it's manual, undefined in size, and likely re-concentrates risk in the same two people instead of spreading it. **Move it from a human ritual to an automated, scripted restore-and-verify job** that anyone can run from a runbook — that gets you the safety without spending your scarcest resource on a recurring chore.
 
 *How did that land?*

@@ -4,8 +4,8 @@
 
 - [Persona](#persona)
 - [The Challenge](#the-challenge)
-- [Run: `/pt full`](#run-pt-full)
-- [Run: `/pt full optionality: on`](#run-pt-full-optionality-on)
+- [Run: `/pressure-test full`](#run-pressure-test-full)
+- [Run: `/pressure-test full optionality: on`](#run-pressure-test-full-optionality-on)
 
 ---
 
@@ -21,9 +21,9 @@ Whether to act on the productivity data by restructuring the team — and if so,
 
 ---
 
-## Run: `/pt full`
+## Run: `/pressure-test full`
 
-> `/pt full The productivity data is clear — AI has changed what we need from our team. When we lose people naturally, we shouldn't backfill. And for some roles, we probably shouldn't wait for attrition.`
+> `/pressure-test full The productivity data is clear — AI has changed what we need from our team. When we lose people naturally, we shouldn't backfill. And for some roles, we probably shouldn't wait for attrition.`
 >
 > *Context: the Persona section above was pasted into the conversation before this command.*
 
@@ -31,9 +31,19 @@ Whether to act on the productivity data by restructuring the team — and if so,
 
 ### Mirror
 
-You're measuring output, and the output data is real. AI has compressed a week of work into a day across a dozen roles. The board has noticed twice. You're not doing this because you want to — you're doing it because the numbers already tell a story, and if you don't write the next chapter on your terms, someone else will write it for you. The plan: let attrition do the slow work, and where the math is clearest, move proactively. This is disciplined, not punitive. You're running a 55-person firm, not a FTSE 100 — there's no cushion to absorb headcount that's been structurally displaced.
+Here's the strongest version of what you're saying:
 
-That the right picture?
+The AI rollout didn't just make people faster at their existing jobs — it changed the actual labor requirement of the firm. Some roles now need meaningfully fewer people to produce the same (or more) output. Given that, headcount policy should have two tracks: a **passive default** — don't backfill roles as people leave naturally — and an **active exception** — for a subset of roles, the gap between old headcount and new requirement is big enough, and the board pressure is acute enough, that waiting for someone to quit is itself the wrong call. Better to make a deliberate, controlled decision now than to be dragged into a reactive one later when the board forces it or a bad quarter makes the timeline someone else's choice.
+
+That's a real position, and it rests on a few load-bearing assumptions, stated neutrally:
+
+1. **The productivity gain is real, durable, and fungible into headcount** — not a pilot-phase novelty effect, not offset by new QA/review burden, and translatable into "we need N fewer people" rather than "we can do N more things with the same people."
+2. **Natural attrition will land on the right roles** — i.e., the people who happen to leave voluntarily over the next 12–24 months will correlate with where the actual AI-driven surplus sits, rather than attrition hitting your strongest people (who have outside options) while the surplus concentrates elsewhere.
+3. **You can already identify, with defensible specificity, which "some roles" can't wait for attrition** — this isn't a vague sense that a couple of teams are overstaffed, it's a criterion you could explain to the board and to the people affected.
+4. **The board's efficiency pressure is best answered by headcount reduction specifically** — not by reinvesting freed capacity into new revenue, service lines, or margin-neutral growth, which is a different answer to the same pressure.
+5. **"On my own terms" is actually available to you** — that you have enough runway (cash, board patience, market conditions) to sequence this deliberately rather than the decision already being made for you by the calendar.
+
+Does that capture it — and in particular, is #3 something you already have an answer for, or is that the actual gap right now?
 
 *Claude waits for a reply.*
 
@@ -41,58 +51,42 @@ That the right picture?
 
 ### Blind Spots
 
-1. **You're measuring output, not contribution.** The productivity data shows what AI can replicate — tasks with measurable throughput. It almost certainly doesn't capture the coordination, client relationship maintenance, institutional knowledge transfer, and quality-checking that the same people do on the margin. You may be about to eliminate roles while quietly retaining the work.
+1. **You're at risk of building the criteria backward.** You've confirmed you know which roles feel non-viable to wait on — but not yet *why*, in a form you could defend. The danger isn't that the criteria don't exist yet; it's the sequencing. If the decision ("these roles, now") comes first and the rubric gets written to justify it, that's not a selection process, it's a pretext — and in the UK, redundancy selection has to be objective and consistently applied or it's exposed to unfair dismissal and age discrimination claims. You explicitly noted some of these people have been there five or six years. Longer tenure often correlates with age and higher salary — exactly the profile that draws scrutiny if the criteria look improvised.
 
-2. **Attrition is not random.** The people most likely to leave voluntarily are the ones with the most options — your stronger performers, the ones being recruited elsewhere. A no-backfill policy could hollow out talent quality while leaving the less mobile, less adaptive people in place. You'd be selecting for the wrong cohort.
+2. **You haven't said whether the freed capacity has nowhere to go, or you've just assumed it.** "A day instead of a week" is a supply-side number. Nothing you've said tests the demand side — whether that freed time could be sold, not shed. A services firm sitting on a productivity surplus eight months in might have a pipeline problem, not a headcount problem. Cutting locks in today's revenue ceiling as permanent; it doesn't test whether the ceiling was ever fixed.
 
-3. **The board framing is narrowing your options.** You've framed this as "act on my terms before the board forces my hand." That's a reasonable read — but it means you're making an irreversible workforce decision partly in response to meeting-room pressure, not purely on business logic. Are you solving a capability problem or a governance optics problem? Those are different decisions.
-
-4. **Proactive exits carry a different cultural signal than attrition.** Your team knows the difference between someone leaving and someone being let go. In a 55-person firm, everyone knows everything. The message that AI-productive roles are being eliminated will reach every remaining employee within days. The question isn't just what it does to morale — it's what it does to how your best people read their own futures at your firm.
-
-5. **You don't yet know where the productivity ceiling is.** Eight months is early. The roles that look 80% automated now may look 60% automated in a year as complexity increases, clients escalate, or AI limitations surface. You're making permanent headcount decisions on a technology curve that hasn't flattened yet.
-
-6. **Client relationships have faces.** In professional services, clients often have relationships with specific people, not with the firm. A restructuring that removes client-facing staff — even productive-looking ones — can produce churn that doesn't show up in your internal productivity data but hits your revenue line in 18 months.
+3. **Attrition doesn't remove surplus — it removes your most mobile people.** Your plan runs two tracks: passive non-backfill where people leave naturally, active cuts where they don't leave fast enough. But the people most likely to leave *naturally* in a market where AI skills are hot are your best, most marketable staff — not necessarily the ones sitting in AI-displaced roles. You could end up proactively cutting the flagged roles while passively bleeding your best people from the *un*flagged ones, for the same underlying reason: everyone with options is watching a firm that's visibly deciding who's expendable.
 
 ### Counter-Punch
 
-Here's what a senior employment solicitor who has worked through the aftermath of AI-driven restructurings in professional services would say directly to Alex:
-
-*"The firms that did this well — that genuinely right-sized without destroying themselves — had one thing in common: they understood what they were eliminating before they eliminated it. The firms that did it badly had your data. Task throughput metrics, productivity ratios, role-level efficiency analysis. Looked airtight. What it didn't capture was the informal coordination layer — the person who spots when a junior analyst has gone off-track, the one who knows which client is price-sensitive before it becomes a contract conversation, the one who quietly holds the institutional memory of why you stopped doing a certain type of engagement three years ago. When those people are gone, the work doesn't disappear. It gets distributed, invisibly, onto whoever remains — except now there are fewer of them, and they're doing two jobs. And here's what I see in the aftermath: the legal exposure isn't what concerns me most. What concerns me is that the decisions you're describing are permanent. The damage, when it comes, won't look like the decision you made. It'll look like a client relationship that quietly deteriorated, or a quality issue that nobody caught in time. Run the structural analysis — not of what AI can do, but of what your people do that your productivity data can't see."*
+Picture the managing partner of a rival firm hearing about your plan, and here's what they'd say: *"You just got handed a free scale advantage and your first move is to shrink. We're taking the same productivity gain and using it to quote faster, take more mandates, and undercut on turnaround — while you're spending the next two quarters in redundancy consultations. In eighteen months we'll be twice your size and bidding against you for the clients you used to own, because you treated a growth lever like a cost lever."*
 
 ### Analogy Flip
 
-Picture an airline that replaces most of its gate agents with self-service kiosks and automated rebooking.
-
-The efficiency case is unambiguous: boarding passes, seat changes, and rebookings that took an agent five minutes now take thirty seconds, and the kiosks never call in sick. What the throughput data never showed was the other work those agents did — spotting the passenger who was about to miss a tight connection, calming a family before a complaint turned into a scene, knowing which inbound flight always ran late and quietly holding the door for its connecting crew. None of it was in the job description. None of it was in the metrics.
-
-A year later, missed connections are up, complaint volumes are up, and delay minutes are being logged as "operational factors." Nobody traces them back to the gate, because the gate agents' coordination work never appeared anywhere as work.
-
-The structure is identical to yours: highly visible productive output is automated, people are reduced, and the invisible parallel work they were doing — coordination, contextual judgment, error interception — turns out not to have been automated at all. It just stops being done. The failures arrive downstream, attributed to other causes, unconnected in the post-mortem to the restructuring decision.
+Picture two taxi fleets that get the same driver-assist technology on the same day — each driver can now safely handle more fares per shift. One fleet owner cuts drivers to hold total rides constant and pockets the margin as savings. The other keeps every driver, drops the price per ride, and uses the extra capacity to take share from fleets that are busy laying people off. A year later, the "efficient" fleet has fewer cars, fewer drivers, and is bidding for corporate contracts against a rival that's now twice its size — built on the same technology shock, spent the opposite way. The tech didn't tell either owner which path was right. The market did, afterward, to only one of them.
 
 ### Verdict Card
 
 | Dimension | Assessment |
 | --- | --- |
-| Core Insight | The productivity data is real. AI has structurally changed what these roles require. Doing nothing is also a decision, and a riskier one at 55 people than at 500. |
-| What the data doesn't capture | Task throughput metrics measure what AI replicated. They don't measure the coordination, error-interception, and client-relationship work happening in the same roles simultaneously. |
-| Attrition as a selection mechanism | No-backfill lets the market choose who leaves — and the market preferentially takes your strongest people. You may end up with the wrong cohort without making a single active decision. |
-| Proactive exits vs. attrition | In a firm this size, the cultural signal difference is total. Every remaining employee will recalibrate their own tenure risk within a week. The cost is real and won't appear in a spreadsheet. |
-| Process risk | "AI has made your role redundant" is not a legally sufficient redundancy rationale without a careful selection and consultation process. The legal exposure is manageable — but only if it's managed, not assumed away. |
-| Biggest Risk | You make permanent decisions on an 8-month productivity curve that hasn't flattened, eliminate the informal quality-and-coordination layer without knowing it existed, and discover the damage 18 months later in client attrition and quality failures — by which point the diagnosis is invisible. |
+| **Core Insight** | Two-track policy (default non-backfill + targeted proactive cuts) is structurally sound and matches where most services firms will land post-AI shock. |
+| **Selection criteria** | Confirmed gap — doesn't exist yet, and the sequencing risk is that it gets built backward from roles already in mind. |
+| **Demand-side test** | Unclear whether freed capacity's revenue potential has been tested before defaulting to headcount reduction. |
+| **Attrition assumption** | Passive track risks losing your most mobile (often best) people while active track only targets flagged roles — the two tracks can work against each other. |
+| **Legal exposure** | UK redundancy selection needs objective, consistent, documented criteria; long-tenured staff raises real age-discrimination risk if criteria look ad hoc. |
+| **Biggest Risk** | Acting on instinct before the rubric exists turns "controlled, on my own terms" into a legal and trust liability the moment the first selection looks arbitrary — which is also the fastest way to hand the board a worse story than the one you're trying to get ahead of. |
 
-**Quick Fix** — Before any exits, run a structured role audit that asks one specific question: *what does this person do that isn't in the task data?* Interview the role-holders, their managers, and the clients who interact with them. You may find the same answer three times, or you may find something that changes the calculus.
+**Quick Fix** — Write the selection rubric *before* anything else moves: task-level AI substitution percentage, not tenure, cost, or gut feel. Then run your current mental list of "some roles" against it as a gut check. If they don't match, that's the signal your instinct is ahead of your rationale — pause there.
 
-**Structural Move** — Separate the headcount question from the capability question. The real strategic decision isn't how many people you need — it's what kind of firm you're becoming. High-throughput, AI-augmented delivery firms run lean and compete on speed and price. Deep advisory firms run with more human overhead because the judgment layer is the product. Those are different businesses. Decide which one you're building before you decide who stays.
-
----
+**Structural Move** — Before finalizing any cut list, run a real 4–6 week test: take one flagged team, redeploy their freed capacity toward revenue (faster turnaround as a sales pitch, absorbing more client volume, a new service line) rather than assuming the ceiling's fixed. If growth absorbs it, that role exits the cut bucket. If it doesn't, you cut with evidence you tested the alternative — which protects you with the board, and legally, far better than "the data was clear."
 
 *How did that land?*
 
 ---
 
-## Run: `/pt full optionality: on`
+## Run: `/pressure-test full optionality: on`
 
-> `/pt full optionality: on The productivity data is clear — AI has changed what we need from our team. When we lose people naturally, we shouldn't backfill. And for some roles, we probably shouldn't wait for attrition.`
+> `/pressure-test full optionality: on The productivity data is clear — AI has changed what we need from our team. When we lose people naturally, we shouldn't backfill. And for some roles, we probably shouldn't wait for attrition.`
 >
 > *Context: the Persona section above was pasted into the conversation before this command.*
 
@@ -100,61 +94,65 @@ The structure is identical to yours: highly visible productive output is automat
 
 ### Mirror
 
-The productivity data isn't a hypothesis — it's operational fact. One day of output now equals one week from eight months ago in a dozen roles across your firm. That's not efficiency at the margin; that's a structural change to the input-output equation of your business. The load-bearing assumption in your thinking: the work that used to require five people now genuinely requires one, and the other four aren't doing anything that creates value that isn't visible in your current metrics. From that premise, the conclusion follows. Attrition-first is the humane path, and if you wait too long the board forces the decision on worse terms — a reactive cut that damages morale more than a deliberate one. Acting now, on your terms, while you can design severance and sequencing thoughtfully, is arguably the more responsible version.
+Here's what I'm hearing, stated in its strongest form:
 
-Does that capture where you are — and is the "value not visible in metrics" assumption one you're confident about, or is that actually the open question?
+AI hasn't just made your team faster at the margins — it's compressed cycle time on core deliverables (research, drafting, client prep, analysis) by something like 5x in places. That's not a productivity tweak, it's a change in the production function: the amount of labor required per unit of client output has genuinely dropped. With 12–15 of 55 people (22–27% of headcount) sitting in roles where AI now does a substantial share of the work they were hired for, the firm is structurally overstaffed relative to what it actually needs to produce its current output. Two decisions follow from that:
+
+1. **Passive correction**: when someone in one of those roles leaves naturally, don't backfill — the marginal need for that seat has already dropped, so refilling it would be re-inflating a cost structure you no longer require.
+2. **Active correction, for some roles**: don't wait for attrition at all. Waiting is not neutral — it's a choice to let the calendar decide instead of the business case, and the board pressure means the window to handle this on your own terms (timing, severance, how it's communicated, who's affected) is closing. If the board forces the issue later, or cash gets tight, you lose control over how it happens, not just when.
+
+That argument rests on a few assumptions I want to name plainly, before I push on any of them:
+
+- **Fixed demand, not reallocated capacity**: that the time AI frees up should convert into fewer people, rather than into more client work, new service lines, or higher-quality output at the same headcount.
+- **Role-to-person mapping**: that "AI does a substantial part of what this role does" cleanly identifies *which people* are redundant, rather than people whose jobs are shifting in composition (less drafting, more judgment/review/client contact).
+- **Same decision, different clock**: that attrition-based non-backfill and proactive cuts are really one decision on two timelines, not two decisions with different risk profiles.
+- **Headcount is the right lever**: that the board's "efficiency" pressure is actually about headcount specifically, not margin or utilization more broadly, which could be addressed other ways.
+- **Control changes the outcome, not just the narrative**: that doing this "on your own terms" is different in substance for the employees affected, not only different in how defensible it looks to the board.
+
+Does that capture it — or would you put it differently?
 
 *Claude waits for a reply.*
 
-> **Alex:** Honestly, that's the open question.
+> **Alex:** Honestly, the part I'm least sure of is whether the data shows everything these people do. That's the open question.
+
+That's the right place to press — it's the assumption everything else depends on, and it wasn't fully named in the mirror even though it was implicit in it. Continuing from there:
 
 ### Blind Spots
 
-1. **You may be measuring output but not work.** What AI has accelerated is often the producible artifact — the report, the model, the memo. What it hasn't replaced is the judgment that makes the artifact worth buying: knowing which question to ask, which data to distrust, which client interpretation is wrong. Your five-to-one headcount logic holds if the remaining person can supply that judgment fully. If the judgment was distributed across four people with different angles, you won't know it's gone until a client notices.
+1. **The metric is biased toward what's easy to time — which is also what AI is best at.** "A week's work in a day" almost certainly describes drafting, research pulls, first-pass analysis: tasks with a clear start, end, and stopwatch. The parts of these jobs that are hardest to time — catching that the client's stated question isn't their real question, knowing which finding will actually move a decision, managing the relationship when a deliverable lands badly, mentoring a junior on how not to screw up next time — were never on a stopwatch to begin with. So the data isn't neutral evidence about the whole role; it's a measurement of exactly the slice that was measurable, which is suspiciously the same slice AI is good at. That's not a coincidence, it's selection.
 
-2. **The ratio is eight months old and still moving.** You're making a near-permanent headcount decision based on a productivity snapshot taken at a moment of rapid flux. The team that's at five-to-one today may be at ten-to-one in eighteen months, or may plateau because the remaining work is the part AI can't do. Cutting to what you need now may mean cutting twice.
+2. **You're generalizing from task throughput to role output**, and those aren't the same thing. If AI speeds up 60% of a role's tasks but the other 40% — judgment calls, error-catching, client handling — still gates delivery at the old pace, the role hasn't actually compressed by 5x. It's compressed on the part you can see.
 
-3. **You don't yet know which roles are redundant versus which are bottlenecks.** "AI is doing a substantial part of the work" in twelve to fifteen roles is an average statement. It almost certainly masks high variance: some people have leaned in and are now far more productive; others are coasting on the tool doing their job. Acting on the average punishes the leveragers and protects the coasters, depending on how you select who goes.
-
-4. **Your ability to absorb new kinds of work may depend on the people you're cutting.** Professional services growth often comes from relationships that are client-facing and laterally maintained — people who know the client, understand their context, and generate upsells organically. If the twelve to fifteen at-risk people include that layer, you're not trimming fat; you're removing the tissue that converts delivery capacity into revenue.
-
-5. **The survivors will update their behaviour.** When you cut, everyone who remains learns what it means to be highly AI-productive in your firm: you make yourself redundant. That's a durable signal about the implicit contract, and it will shape how your remaining team approaches tool adoption going forward.
+3. **The five-and-six-year people are the ones most likely to hold the invisible 40%.** Tenure is exactly what builds the judgment to catch an AI-generated report that's confidently wrong before a client sees it. That capability doesn't show up on a dashboard — it shows up as an absence, months later, in the one report that went out wrong.
 
 ### Counter-Punch
 
-Here's what a mid-level analyst — four years in, highly AI-productive, likely on the list — would say directly:
-
-*"I've been the most aggressive adopter of every AI tool you rolled out. I volunteered for the pilot. I documented workflows for the rest of the team. I am the reason our throughput doubled in my pod. And now I'm looking at the headcount list and I think I'm on it — because I made my own output so efficient that I look like one of the roles you don't need. The people who didn't engage as hard still have rougher, more opaque workflows. They look necessary because the work around them still looks hard. I'm not asking you to keep me because I'm loyal. I'm asking you whether you've actually looked at who's doing what, or whether you're just running the numbers on a spreadsheet that rewards the people who resisted change. Because the message I'm about to take into the market — whether I mean to or not — is that your firm eats its change-agents. That's going to be very interesting for your next AI rollout."*
+Here's what a client who's had the same account lead for five years would say if they overheard this reasoning: *"I don't know what your internal metrics say, and I don't care. I know when a report feels like it actually gets our business versus when it feels assembled. I couldn't tell you which parts of my account lead's job are 'AI-accelerated' — I just know that if you swap that person out, I'll notice something's off before you will, and I won't file a complaint that shows up in your dashboard. I'll just quietly start taking calls from your competitor."* By the time that shows up as a number, it's a lost client, not a line item — and it won't be attributed back to the headcount decision that caused it.
 
 ### Analogy Flip
 
-Think about what happened to mid-tier hospital radiology departments when digital imaging came in. Radiologists used to be physically embedded in clinical teams — they walked wards, they knew which attending ordered questionable studies, they caught problems upstream before the scan was even taken. Digital centralisation made all of that invisible: the scan still got read, turnaround times improved, costs fell. Administrators looked at throughput numbers and concluded the system was working better. What they lost was the interpretive friction — the radiologist who flagged that the third scan on this patient in two months was clinically strange, the one who built enough relationship with the surgical team to be trusted when they said "don't operate on that."
-
-The parallel to your firm is exact: AI tools have made the reportable work faster and cleaner, and that's what your productivity data shows. What the data doesn't show is the interpretive friction your analysts provide — the sideways knowledge, the relationship memory, the professional judgment that makes a client trust the analysis rather than just receive it. Hospital administrators couldn't see it in scan turnaround times. You can't see it in throughput charts. It still exists, and it still matters.
+This is the self-checkout problem. Retailers measured checkout speed, saw a clear, real, undeniable improvement, and cut cashier headcount accordingly. What they hadn't measured — because it was bundled invisibly into the cashier role, not tracked as its own line — was the theft-deterrence and mis-scan-catching that a human at a register was quietly doing the whole time. Shrinkage rose, in some cases enough that retailers walked the rollout back. The dashboard that showed the labor savings wasn't the same dashboard that eventually showed the cost, and by the time the second number arrived, the decision had already been made and praised. You're at the "checkout is faster" stage of that story. You haven't yet built the equivalent of a shrinkage metric for what your senior people catch.
 
 ### Verdict Card
 
 | Dimension | Assessment |
 | --- | --- |
-| Core Insight | AI has genuinely restructured your input-output equation, and ignoring that is a failure of leadership. The question is whether your productivity data measures the full work or only the visible artifact. |
-| What the data proves | That the producible output per person has radically increased. That's real and warrants structural response. |
-| What the data doesn't prove | That the people producing less visible output — relationship maintenance, judgment, interpretive friction — aren't creating value that sustains your revenue. |
-| Timing risk | An eight-month snapshot taken during rapid AI adoption is not a stable baseline. You may be optimising for a moment rather than a model. |
-| Signal risk | Cutting your most AI-productive people (or being perceived to) permanently damages your firm's relationship with capability adoption. |
-| Biggest Risk | You act on output metrics that systematically exclude the thing that makes your analysis worth paying for, and you don't find out until a major client relationship frays. |
+| **Core Insight** | AI has genuinely changed the labor requirement for parts of these jobs — that half of the claim is solid and not really in dispute. |
+| **Data completeness** | The productivity metric almost certainly only captures the AI-legible slice of each role, not the judgment/relationship/error-catching slice — and that gap is unmeasured, not just unmentioned. |
+| **Attrition-based non-backfill** | Low-risk either way — you're not removing anyone who's currently catching errors or holding a relationship; you're just not adding capacity back. Defensible now, on current evidence. |
+| **Proactive cuts** | High-risk given the measurement gap — you'd be removing people based on a metric you just admitted doesn't see everything they do, on the theory that the unmeasured part doesn't matter. |
+| **Biggest Risk** | You cut into the invisible 40% believing it was already replaced, and find out it wasn't when a client-visible failure happens — by which point the productivity win is already booked and nobody traces the failure back to the decision. |
 
-**Quick Fix** — Run a person-by-person role audit that maps each at-risk role against: (a) client relationships that are personal rather than institutional, (b) institutional knowledge that isn't documented, (c) the informal coordination work the productivity data can't see. What's left after that mapping is a much cleaner picture of what's genuinely redundant versus what just looks redundant on a dashboard.
+**Quick Fix**
+Before any proactive cut, do a one-page audit per candidate role: list everything the person actually does in a typical month, not just the AI-timed tasks, and flag which items would cause a client-visible failure within 90 days if they stopped. That separates "genuinely redundant" from "invisible but load-bearing" fast and cheaply.
 
-**Structural Move** — Re-architect around leverage, not reduction. Rather than cutting to current need, redesign team roles so AI-augmented capacity explicitly absorbs higher-value work: more client coverage, more complex engagements, higher-margin advisory. This tests whether you have a capacity surplus or an ambition ceiling — and the answer determines whether the right move is reduction or growth.
+**Structural Move**
+Split the decision by confidence level instead of treating it as one policy. Roles where you're confident the work is genuinely redundant (overlapping coverage, no unique client relationship): non-backfill now, that's a real and low-risk board win. Roles where the productivity case is strong but the invisible-work question is open: hold for one to two quarters as a deliberate evidence-gathering stage, tracking client escalations, near-miss/error catches, and renewal signals — not indefinitely, but against a set re-check date and explicit criteria for what triggers a cut versus what clears the person.
 
-### Optional Stretch
+**Optional Stretch**
 
-1. **Managed reduction with full transparency** — Make the restructuring decision actively rather than by attrition, but treat it explicitly as a strategic transition rather than a cost cut. Be transparent with affected people about why, be generous with the terms, personally manage client communication for any relationship-bearing roles, and let the way you handle it define what the firm stands for. What it reveals that the others don't: whether the firm is actually ready to commit to the AI-augmented operating model, or whether the restructuring is a board-driven cost measure dressed up as a transformation story.
-
-2. **Redeployment moratorium** — Impose a 12-month moratorium on restructuring decisions and spend that time actively redefining every at-risk role: what does this person do in an AI-augmented version of this firm, what do they need to develop, and what does success look like? Cuts happen only where genuine redeployment isn't possible after a real effort. This path is slower and more expensive in the short term, but it builds the transformation capability the firm will need rather than just removing the people who represent the old model. What it reveals: whether the constraint is genuinely headcount or whether it's the absence of a clear vision for what the augmented firm actually looks like.
-
-3. **Compete on talent density instead of reducing it** — Use the AI productivity gains not to cut headcount but to raise the bar on the work you take on. Take on larger mandates, more complex problems, better clients — and position the firm as one that uses AI to do higher-quality work rather than the same work with fewer people. This is a bet on differentiation over margin, and it requires deliberately not harvesting efficiency gains short-term. What it reveals: whether the firm has the market position and pipeline to grow into the expanded capacity — and if not, what it would take to get there.
-
----
+1. **Redeploy-first** — move the freed-up capacity from the 12–15 into new revenue work instead of cutting. If nothing breaks, you've cheaply confirmed the role really was redundant; if something breaks, you've just discovered what was invisible — at far lower cost than firing first and finding out.
+2. **Shadow-metric pilot** — pick two or three of the most AI-accelerated roles and quietly track downstream outcomes (escalations, error catches, renewals) for one quarter before deciding anything, so the eventual decision rests on outcome data instead of task-timing data.
+3. **Attrition-now, trigger-later** — commit to non-backfill immediately as your answer to the board this quarter, which is real and defensible, while setting an explicit quarterly threshold (margin, utilization, error rate) that would force the proactive-cut question later — by which point you'll actually have evidence instead of a guess.
 
 *How did that land?*

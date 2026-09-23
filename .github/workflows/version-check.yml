@@ -31,6 +31,12 @@ jobs:
             FAIL=1
           }
 
+          STALE=$(grep -oE '/(download/)?v[0-9]+\.[0-9]+/' README.md | grep -vF "v${VERSION}/" || true)
+          [ -z "$STALE" ] || {
+            echo "README.md has version URLs that aren't v${VERSION}: $STALE"
+            FAIL=1
+          }
+
           grep -qF "**Version: ${VERSION}**" gist/claude-pressure-test.md || {
             echo "gist/claude-pressure-test.md does not say Version: ${VERSION}"
             FAIL=1

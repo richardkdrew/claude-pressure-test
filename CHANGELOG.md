@@ -4,6 +4,39 @@ All notable changes to the Pressure Test skill are documented here.
 
 ---
 
+## v2.7 — 2026-09-23
+
+Driven by six independent persona reviews of v2.6 (about 45 real conversations) and a new behaviour-eval suite.
+
+### Changed
+
+- **Default intensity is now `medium`** — one response, around 450 words. `full` is still there for decisions worth ten minutes
+- **Grounding applies to every move** — anything stated as fact, including in the Counter-Punch's voice, must be something Claude is confident is true; unsure statistics and real cases are labelled as rough guesses or left out
+- **Counter-Punch archetype is a role, not a named person** — no invented names or résumés; the example archetype is now "the customer who churned last quarter", matching the rule that it shouldn't be a more senior version of the user
+- **Works from what the user said** — no invented role, stage, team, or history; missing facts that matter are named as assumptions
+- **Checks the user's numbers** — load-bearing arithmetic is recomputed in the Mirror before anything is challenged
+- **Scales to the idea** — 1–3 blind spots at full ("one is often right"); a narrow idea gets a small scorecard
+- **Ideas that hold get a short verdict** — "ship it; watch X", even at full
+- **Analogy Flip can step aside** — if the best analogy only restates a Blind Spot, Claude says so in a line and moves on
+- **Mirror** — at full, assumptions are named neutrally and judged only after the user confirms; at light and medium, the Mirror ends with "If I've misread you, say so and I'll rerun from here" instead of a question it doesn't wait for
+- **Structural Move** — "stage it" / "pilot first" only when the stages and stop condition can be named
+- **Concessions** — replacement advice after pushback is tested as hard as the original
+- **People decisions** — no assumed jurisdiction, HR/legal flagged, challenge the decision not the person
+- **Docs** — `/pressure-test` used throughout (works everywhere; `/pt` is the claude.ai shorthand); repo-install commands; pinned-version zip and release notifications for team rollouts; privacy note; gist guide retitled "Pressure Test — Setup"
+- **Examples** — regenerated with v2.7 in an isolated setup, headings normalised, content unedited; new runs show a Mirror correction, a pushback with a partial concession, and a sound idea at the default intensity. One run with inaccurate real-world claims was discarded and regenerated (noted in `examples/README.md`)
+
+### Added
+
+- **Behaviour evals** — `evals/cases.json` and `scripts/run-evals.sh`: 15 cases run as real conversations through `claude -p`, scripted checks plus a judge model. Runs use `--setting-sources project` so the tester's own plugins, hooks, and CLAUDE.md don't leak in. Usage-limit and API errors are reported as ERROR, not FAIL. Run before releases that change skill content; `/release` now includes the step. v2.6 → v2.7 on the same cases, 2 reps each: **58 → 70 of 76 checks**
+- **CI** — fails if any versioned URL in the README doesn't match the current version
+
+### Fixed
+
+- **Optional Stretch length** — "two to three sentences" now applies at full only; medium is one sentence per approach, as documented in v2.6
+- **No preamble** — the skill now says to open with the Mirror. The "Using the pressure-test skill…" line reported in the v2.6 reviews was most likely injected by the reviewers' own Claude Code plugins rather than the skill; the evals now isolate against that
+
+---
+
 ## v2.6 — 2026-09-23
 
 v2.5 was never released; its install-path fix ships here.

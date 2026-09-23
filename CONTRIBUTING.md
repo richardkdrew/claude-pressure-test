@@ -36,6 +36,8 @@ Changes that drift toward comprehensiveness, hedging, or academic structure are 
 
 Edit skill content in `SKILL.md` only — the gist's copy is generated from it.
 
+If you have Claude Code, run the behaviour evals before and after your change (`scripts/run-evals.sh --only <case>` runs one case) and include the results. A change that fixes one behaviour and breaks another is the most common way a good idea doesn't land. If you're fixing something the evals don't cover, add a case to `evals/cases.json`.
+
 ---
 
 ## What to Expect
